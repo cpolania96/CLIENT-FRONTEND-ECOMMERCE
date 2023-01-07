@@ -1,0 +1,471 @@
+header {
+    width: 100%;
+    height: 190px;
+    overflow: hidden;
+    .container-news {
+        height: 20%;
+        display: flex;
+        justify-content: center;
+        background-color: #23b2f8;
+        .news {
+            height: 100%;
+            width: 80%;
+            background-image: url(/src/banners/banner-1025px@330x-100.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position-y: -3px;
+        }
+    }
+    .container-principal {
+        height: 54%;
+        background-color: #f8f8ff;
+        display: flex;
+        justify-content: center;
+        .principal {
+            width: 66rem;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            .container-first {
+                width: 100%;
+                height: 1.6rem;
+                display: flex;
+                justify-content: right;
+                .social {
+                    height: 100%;
+                    width: 12rem;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-right: 8px;
+                    padding-top: 4px;
+                    .label {
+                        height: 80%;
+                        width: 40%;
+                        border-right: 1px solid #3f3844;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        @include roboto;
+                        color: #3f3844;
+                    }
+                    .icon {
+                        height: 100%;
+                        width: 1.6rem;
+                        margin-left: 4px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        cursor: pointer;
+                        svg {
+                            height: auto;
+                            width: 20px;
+                            .st0 {
+                                fill: #3f3844;
+                            }
+                        }
+                    }
+                }
+            }
+            .container-second {
+                height: 3.1rem;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-top: 6px;
+                .container-logo,
+                .container-search,
+                .container-tools {
+                    height: 2rem;
+                }
+                .container-logo,
+                .container-tools {
+                    width: 20%;
+                }
+                .container-logo {
+                    position: relative;
+                    .logo {
+                        width: 6rem;
+                        height: 6rem;
+                        background-image: url(/src/identidad/logo_corporativo.png);
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: 90px;
+                        position: absolute;
+                        left: 3rem;
+                        bottom: -28px;
+                    }
+                }
+                .container-search {
+                    width: 52%;
+                    height: 80%;
+                    display: flex;
+                    justify-content: center;
+                    .search {
+                        height: 100%;
+                        width: 30rem;
+                        display: flex;
+                        input,
+                        button {
+                            border-top: 1px solid $color-principal;
+                            border-bottom: 1px solid $color-principal;
+                            background-color: $color-blanco;
+                        }
+                        input {
+                            width: 89%;
+                            outline: none;
+                            padding-left: 10px;
+                            border-left: 1px solid $color-principal;
+                            border-right: none;
+                            border-radius: 9px 0 0 9px;
+                            font-size: 1.1rem;
+                            @include roboto;
+                            color: $color-texto-secundario;
+                        }
+                        button {
+                            width: 11%;
+                            cursor: pointer;
+                            border-right: 1px solid $color-principal;
+                            border-left: none;
+                            border-radius: 0 9px 9px 0;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            svg {
+                                width: 1.4rem;
+                                height: auto;
+                                .st0 {
+                                    fill: $color-principal;
+                                }
+                            }
+                        }
+                    }
+                }
+                .container-tools {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-right: 11px;
+                    width: 19%;
+                    height: 2.3rem;
+                    .profile,
+                    .track,
+                    .container-cart {
+                        height: 100%;
+                    }
+                    .profile,
+                    .track {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 13%;
+                        a {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            height: auto;
+                            width: 27px;
+                            svg {
+                                width: 100%;
+                                height: 100%;
+                                .st0 {
+                                    fill: $color-principal;
+                                }
+                            }
+                        }
+                    }
+                    .track {
+                        a {
+                            width: 20px;
+                        }
+                    }
+                    .container-cart {
+                        width: 60%;
+                        display: flex;
+                        justify-content: center;
+                        .cart {
+                            height: 100%;
+                            width: 100%;
+                            background-color: $color-principal;
+                            border-radius: 4px;
+                            display: flex;
+                            cursor: pointer;
+                            justify-content: space-between;
+                            padding-right: 5px;
+                            &:hover {
+                                .icon-2 {
+                                    svg {
+                                        transform: rotate(0deg);
+                                        transition: 0.3s;
+                                    }
+                                }
+                            }
+                            .icon,
+                            h6,
+                            .icon-2 {
+                                height: 100%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                            }
+                            .icon,
+                            h6 {
+                                width: 40%;
+                            }
+                            .icon {
+                                position: relative;
+                                width: 27%;
+                                padding-top: 3px;
+                                svg {
+                                    height: auto;
+                                    width: 19px;
+                                    .st0 {
+                                        fill: $color-blanco;
+                                    }
+                                }
+                                span {
+                                    width: 14px;
+                                    height: 14px;
+                                    padding-right: 1px;
+                                    padding-bottom: 1px;
+                                    background-color: $color-secundario;
+                                    position: absolute;
+                                    top: 4px;
+                                    right: 0px;
+                                    border-radius: 50%;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    @include roboto;
+                                    color: $color-blanco;
+                                    font-size: 0.8rem;
+                                }
+                            }
+                            h6 {
+                                @include roboto;
+                                color: $color-blanco;
+                                font-size: 1rem;
+                                margin-right: 3px;
+                                width: 56%;
+                            }
+                            .icon-2 {
+                                width: 12%;
+                                svg {
+                                    height: auto;
+                                    width: 12px;
+                                    transform: rotate(180deg);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .container-menu {
+        height: 26%;
+        background-color: $color-principal;
+        display: flex;
+        justify-content: center;
+        menu {
+            width: 66rem;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            .items {
+                width: 12%;
+                display: flex;
+                justify-content: center;
+                h6 {
+                    font-size: 1rem;
+                    color: white;
+                    @include roboto;
+                }
+            }
+            .list-menu {
+                width: 20%;
+                align-items: center;
+                .btn-menu {
+                    width: 10rem;
+                    height: 2.4em;
+                    background-color: $color-secundario;
+                    border-radius: 6px;
+                    display: flex;
+                    cursor: pointer;
+                    &:hover {
+                        .icon>svg {
+                            transform: rotate(180deg);
+                            transition: 0.3s;
+                        }
+                    }
+                    .img,
+                    .label,
+                    .icon {
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    .img {
+                        width: 30%;
+                        svg {
+                            height: auto;
+                            width: 28px;
+                            .st0 {
+                                fill: white;
+                            }
+                        }
+                    }
+                    h6 {
+                        display: flex;
+                        align-items: center;
+                        width: 50%;
+                        padding-left: 1px;
+                        font-size: 1.2rem;
+                    }
+                    .icon {
+                        width: 20%;
+                        svg {
+                            height: auto;
+                            width: 0.9rem;
+                            margin-right: 9px;
+                            .st0 {
+                                fill: white;
+                            }
+                        }
+                    }
+                }
+            }
+            .options {
+                &:hover {
+                    background-color: #dd810fdb;
+                    cursor: pointer;
+                }
+            }
+            .offert {
+                span,
+                h6 {
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                }
+                span {
+                    width: 20%;
+                    justify-content: center;
+                    svg {
+                        height: auto;
+                        width: 1.6rem;
+                        .st0 {
+                            fill: white;
+                        }
+                    }
+                }
+                h6 {
+                    width: 53px;
+                    margin-left: 7px;
+                }
+            }
+            .blog {
+                &:hover {
+                    span>svg {
+                        transform: rotate(180deg);
+                        transition: 0.3s;
+                    }
+                }
+                h6,
+                span {
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                }
+                span {
+                    width: 20%;
+                    justify-content: center;
+                    svg {
+                        height: auto;
+                        width: 0.9rem;
+                        margin-left: 4px;
+                        .st0 {
+                            fill: white;
+                        }
+                    }
+                }
+            }
+            .adopt {
+                align-items: center;
+            }
+            .dogcast {
+                span,
+                h6 {
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    margin-left: 4px;
+                }
+                span {
+                    width: 28%;
+                    justify-content: center;
+                    svg {
+                        height: auto;
+                        width: 1.7rem;
+                        .st0 {
+                            fill: white;
+                        }
+                    }
+                }
+                h6 {
+                    width: 69px;
+                }
+            }
+            .contact {
+                width: 18%;
+                display: flex;
+                position: relative;
+                .icon,
+                .label {
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                }
+                .icon {
+                    width: 25%;
+                    a {
+                        width: 2.3rem;
+                        cursor: pointer;
+                        svg {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+                .mess {
+                    // Falta por script para mostrar con hover a icon
+                    display: none;
+                    justify-content: center;
+                    align-items: center;
+                    height: 19px;
+                    width: 66px;
+                    background-color: $color-principal;
+                    font-size: 0.7rem;
+                    position: absolute;
+                    color: black;
+                    top: 56px;
+                    left: -10px;
+                    transform: translate(0px, -3px);
+                    border-radius: 4px;
+                    color: white;
+                }
+                .label {
+                    width: 75%;
+                    flex-direction: column;
+                    h6 {
+                        height: 40%;
+                        width: 100%;
+                        font-weight: 200;
+                        padding-left: 4px;
+                    }
+                }
+            }
+        }
+    }
+}
