@@ -1,12 +1,15 @@
 // Estilos del módulo de logo
-a {
+.container-logo {
     height: 100%;
-    width: 21%;
+    width: 100%;
     position: relative;
-    .container-logo {
+    a {
         position: absolute;
         left: 17px;
-        top: -5px;
-        height: 50px;
+        top: -8px;
+        width: 82%;
+        img {
+            width: 100%;
+        }
     }
 }

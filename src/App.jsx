@@ -1,8 +1,8 @@
 import './App.css';
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Header from './modules/Header/header';
-import Main from './modules/ProyectModules/Main/Main';
+import Header from './modules/Header/Header';
+import Main from './modules/Main/Main';
 import Footer from './modules/ProyectModules/Footer/Footer.jsx';
 import ItemDetailContainer from './modules/ItemDetailContainer/ItemDetailContainer';
 import { CartContextProvider } from './Context/cartContext';
@@ -10,6 +10,7 @@ import ContainerCategory from './modules/ItemListContainer/ContainerCategory';
 import Checkout from './modules/CartWidget/Checkout'
 import Cart from './modules/CartWidget/cart';
 
+// Módulo principal de app
 const App = () => {
     return (
         <CartContextProvider >

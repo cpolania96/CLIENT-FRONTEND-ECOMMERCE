@@ -36,7 +36,7 @@ const Menu = () => {
         <menu>
             {
                 menuItems.map(item => (
-                    <Link to={item.to}>
+                    <Link to={item.to} key={item.id}>
                         <h2>{item.title}</h2>
                     </Link>
                 ))

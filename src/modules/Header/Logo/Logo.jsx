@@ -13,11 +13,11 @@ function Logo() {
     }
     // Exportación del módulo
     return (
-        <Link to="/">
-            <div className="container-logo">
+        <div className="container-logo">
+            <Link to="/">
                 <img src={sources.logo.link} alt={sources.logo.alt} />
-            </div>
-        </Link>
+            </Link>
+        </div>
     )
 }
 // Exportación

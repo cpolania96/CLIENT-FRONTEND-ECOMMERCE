@@ -1,6 +1,6 @@
-import Ad from '../button/Ad'
-import At from '../button/At'
-import ItemListContainer from '../../ItemListContainer/ItemListContainer'
+import Ad from '../ProyectModules/button/Ad'
+import At from '../ProyectModules/button/At'
+import ItemListContainer from '../ItemListContainer/ItemListContainer'
 
 function ContainerBanner({ TITLE }) {
     const ID = "cards"

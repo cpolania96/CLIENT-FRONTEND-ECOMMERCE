@@ -1,0 +1,54 @@
+// Estilos del módulo de banner de iconos
+.banner-icons {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    ul {
+        width: 64%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        li {
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            width: 30%;
+            span, div {
+                height: 100%;
+                display: flex;
+                align-items: center;
+            }
+            span {
+                width: 22%;
+                justify-content: center;
+                svg {
+                    height: auto;
+                    width: 49%;
+                    .st0 {
+                        fill: $primary;
+                    }
+                }
+            }
+            div {
+                width: 78%;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                h3 {
+                    color: #3F3844;
+                    height: 35%;
+                    &:first-child {
+                        font-size: 0.9rem;
+                        font-weight: bold;
+                        margin-top: 9px;
+                    }
+                    &:last-child {
+                        font-size: 0.8rem;
+                        font-weight: lighter;
+                    }
+                }
+            }
+        }
+    }
+}

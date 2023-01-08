@@ -1,14 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
-a {
+.container-logo {
   height: 100%;
-  width: 21%;
+  width: 100%;
   position: relative; }
-  a .container-logo {
+  .container-logo a {
     position: absolute;
     left: 17px;
-    top: -5px;
-    height: 50px; }
+    top: -8px;
+    width: 82%; }
+    .container-logo a img {
+      width: 100%; }
 
 .search {
   height: 100%;
@@ -244,346 +246,342 @@ html {
   font-family: 'Roboto', sans-serif;
   font-size: 16px; }
 
-main {
+.banner-icons {
   width: 100%;
-  height: 100%;
+  height: 60px;
   display: flex;
-  justify-content: center;
-  background-color: #f2f3f4; }
-  main .container-content {
-    width: 76%;
-    height: 98%;
-    background-color: #f8f8ff; }
-    main .container-content .info-label {
-      width: 100%;
-      height: 42px;
-      padding: 0 18px;
+  justify-content: center; }
+  .banner-icons ul {
+    width: 64%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between; }
+    .banner-icons ul li {
+      list-style: none;
       display: flex;
-      justify-content: space-between; }
-      main .container-content .info-label .label {
-        width: 32%;
+      flex-direction: row;
+      width: 30%; }
+      .banner-icons ul li span, .banner-icons ul li div {
         height: 100%;
         display: flex;
-        align-items: center;
-        justify-content: center; }
-        main .container-content .info-label .label span,
-        main .container-content .info-label .label h6 {
-          display: flex;
-          align-items: center; }
-        main .container-content .info-label .label span {
-          width: 20%;
-          height: 100%;
-          justify-content: center; }
-          main .container-content .info-label .label span svg {
-            height: auto;
-            width: 30px; }
-            main .container-content .info-label .label span svg .st0 {
-              fill: #f89922; }
-        main .container-content .info-label .label h6 {
-          width: 77%;
-          height: 72%;
-          font-family: "Roboto", sans-serif;
-          font-size: 0.85rem;
-          color: #3f3844;
-          border-right: 1px solid #f89922; }
-      main .container-content .info-label .l1 > span svg {
-        width: 30px; }
-      main .container-content .info-label .l2 > span svg {
-        width: 20px; }
-      main .container-content .info-label .last span > svg {
-        height: auto;
-        width: 24px; }
-      main .container-content .info-label .last h6 {
-        border-right: none; }
-    main .container-content .banner-carousell {
-      width: 100%;
-      height: 19rem;
-      border-top: 1px solid #3f384417;
-      border-bottom: 1px solid #3f384417;
-      display: flex;
-      justify-content: space-between;
-      position: relative; }
-      main .container-content .banner-carousell .selector {
-        height: 100%;
-        width: 85px;
-        border: none;
-        background-color: #f8f8ff;
-        cursor: pointer; }
-        main .container-content .banner-carousell .selector svg {
-          width: 37px;
-          height: auto; }
-          main .container-content .banner-carousell .selector svg .st0 {
-            fill: #1173a3;
-            -webkit-box-shadow: 1px 11px 32px 8px rgba(63, 56, 68, 0.66);
-            box-shadow: 1px 11px 32px 8px rgba(63, 56, 68, 0.66); }
-      main .container-content .banner-carousell .container-indicator {
-        width: 15%;
-        height: 2rem;
-        position: absolute;
-        bottom: 1px;
-        left: 0;
-        right: 0;
-        margin: auto;
-        display: flex;
-        justify-content: space-around;
         align-items: center; }
-        main .container-content .banner-carousell .container-indicator .indicator {
-          height: 12px;
-          width: 12px;
-          border: 1px solid #1173a3;
-          border-radius: 50%; }
-        main .container-content .banner-carousell .container-indicator .i1 {
-          background-color: #1173a3; }
-    main .container-content .banner-cards,
-    main .container-content .menu-mascotas,
-    main .container-content .banner {
-      width: 96%;
+      .banner-icons ul li span {
+        width: 22%;
+        justify-content: center; }
+        .banner-icons ul li span svg {
+          height: auto;
+          width: 49%; }
+          .banner-icons ul li span svg .st0 {
+            fill: #9E1460; }
+      .banner-icons ul li div {
+        width: 78%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start; }
+        .banner-icons ul li div h3 {
+          color: #3F3844;
+          height: 35%; }
+          .banner-icons ul li div h3:first-child {
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-top: 9px; }
+          .banner-icons ul li div h3:last-child {
+            font-size: 0.8rem;
+            font-weight: lighter; }
+
+.container-content {
+  width: 100%;
+  height: 98%;
+  background-color: #f8f8ff; }
+  .container-content .banner-carousell {
+    width: 100%;
+    height: 19rem;
+    border-top: 1px solid #3f384417;
+    border-bottom: 1px solid #3f384417;
+    display: flex;
+    justify-content: space-between;
+    position: relative; }
+    .container-content .banner-carousell .selector {
+      height: 100%;
+      width: 85px;
+      border: none;
+      background-color: #f8f8ff;
+      cursor: pointer; }
+      .container-content .banner-carousell .selector svg {
+        width: 37px;
+        height: auto; }
+        .container-content .banner-carousell .selector svg .st0 {
+          fill: #1173a3;
+          -webkit-box-shadow: 1px 11px 32px 8px rgba(63, 56, 68, 0.66);
+          box-shadow: 1px 11px 32px 8px rgba(63, 56, 68, 0.66); }
+    .container-content .banner-carousell .container-indicator {
+      width: 15%;
+      height: 2rem;
+      position: absolute;
+      bottom: 1px;
+      left: 0;
+      right: 0;
       margin: auto;
-      border-bottom: 1px solid #3f384417; }
-    main .container-content .banner-cards {
-      height: 80px;
       display: flex;
       justify-content: space-around;
       align-items: center; }
-      main .container-content .banner-cards .card {
-        height: 3.8rem;
-        width: 14rem;
-        background-color: #1173a3;
-        border-radius: 7px; }
-    main .container-content .menu-mascotas {
-      height: 5.3rem; }
-      main .container-content .menu-mascotas h6,
-      main .container-content .menu-mascotas div {
+      .container-content .banner-carousell .container-indicator .indicator {
+        height: 12px;
+        width: 12px;
+        border: 1px solid #1173a3;
+        border-radius: 50%; }
+      .container-content .banner-carousell .container-indicator .i1 {
+        background-color: #1173a3; }
+  .container-content .banner-cards,
+  .container-content .menu-mascotas,
+  .container-content .banner {
+    width: 96%;
+    margin: auto;
+    border-bottom: 1px solid #3f384417; }
+  .container-content .banner-cards {
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+    .container-content .banner-cards .card {
+      height: 3.8rem;
+      width: 14rem;
+      background-color: #1173a3;
+      border-radius: 7px; }
+  .container-content .menu-mascotas {
+    height: 5.3rem; }
+    .container-content .menu-mascotas h6,
+    .container-content .menu-mascotas div {
+      display: flex;
+      align-items: center; }
+    .container-content .menu-mascotas h6 {
+      height: 25px;
+      padding-left: 10px;
+      font-family: "Roboto", sans-serif;
+      font-size: 0.9rem;
+      color: #3f3844; }
+    .container-content .menu-mascotas div {
+      display: flex;
+      height: 70%;
+      width: 86%;
+      margin: auto;
+      justify-content: space-around;
+      align-items: center; }
+      .container-content .menu-mascotas div a {
+        height: 46px;
+        width: 46px;
+        background-color: #f89922;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        .container-content .menu-mascotas div a svg {
+          height: auto;
+          width: 33px; }
+  .container-content .banner {
+    height: 22rem; }
+    .container-content .banner .title,
+    .container-content .banner .container-cards {
+      width: 100%; }
+    .container-content .banner .title {
+      height: 38px;
+      display: flex;
+      justify-content: space-between; }
+      .container-content .banner .title h6,
+      .container-content .banner .title .selector {
+        height: 100%;
         display: flex;
         align-items: center; }
-      main .container-content .menu-mascotas h6 {
-        height: 25px;
+      .container-content .banner .title h6 {
         padding-left: 10px;
         font-family: "Roboto", sans-serif;
         font-size: 0.9rem;
         color: #3f3844; }
-      main .container-content .menu-mascotas div {
-        display: flex;
-        height: 70%;
-        width: 86%;
-        margin: auto;
+      .container-content .banner .title .selector {
+        width: 82px;
         justify-content: space-around;
-        align-items: center; }
-        main .container-content .menu-mascotas div a {
-          height: 46px;
-          width: 46px;
-          background-color: #f89922;
+        margin-right: 5px; }
+        .container-content .banner .title .selector button {
+          width: 25px;
+          height: 25px;
+          border: none;
           border-radius: 50%;
+          background-color: #1173a3;
+          cursor: pointer;
           display: flex;
           justify-content: center;
           align-items: center; }
-          main .container-content .menu-mascotas div a svg {
-            height: auto;
-            width: 33px; }
-    main .container-content .banner {
-      height: 22rem; }
-      main .container-content .banner .title,
-      main .container-content .banner .container-cards {
-        width: 100%; }
-      main .container-content .banner .title {
-        height: 38px;
-        display: flex;
-        justify-content: space-between; }
-        main .container-content .banner .title h6,
-        main .container-content .banner .title .selector {
-          height: 100%;
+        .container-content .banner .title .selector .at {
+          padding-right: 2px; }
+        .container-content .banner .title .selector .ad {
+          padding-left: 2px; }
+    .container-content .banner .container-cards {
+      height: 91%;
+      width: 59.9rem;
+      display: flex;
+      position: relative;
+      overflow-x: hidden;
+      padding-left: 30px; }
+      .container-content .banner .container-cards .cards {
+        height: 100%;
+        display: flex; }
+        .container-content .banner .container-cards .cards .card {
+          height: 298px;
+          width: 13rem;
           display: flex;
-          align-items: center; }
-        main .container-content .banner .title h6 {
-          padding-left: 10px;
-          font-family: "Roboto", sans-serif;
-          font-size: 0.9rem;
-          color: #3f3844; }
-        main .container-content .banner .title .selector {
-          width: 82px;
-          justify-content: space-around;
-          margin-right: 5px; }
-          main .container-content .banner .title .selector button {
-            width: 25px;
-            height: 25px;
-            border: none;
-            border-radius: 50%;
-            background-color: #1173a3;
-            cursor: pointer;
-            display: flex;
-            justify-content: center;
-            align-items: center; }
-          main .container-content .banner .title .selector .at {
-            padding-right: 2px; }
-          main .container-content .banner .title .selector .ad {
-            padding-left: 2px; }
-      main .container-content .banner .container-cards {
-        height: 91%;
-        width: 59.9rem;
-        display: flex;
-        position: relative;
-        overflow-x: hidden;
-        padding-left: 30px; }
-        main .container-content .banner .container-cards .cards {
-          height: 100%;
-          display: flex; }
-          main .container-content .banner .container-cards .cards .card {
-            height: 298px;
-            width: 13rem;
+          flex-direction: column;
+          border-radius: 0 0 16px 16px;
+          border: 1px solid #1173a3;
+          background-color: white;
+          margin-right: 31px; }
+          .container-content .banner .container-cards .cards .card .body {
+            height: 84%;
             display: flex;
             flex-direction: column;
-            border-radius: 0 0 16px 16px;
-            border: 1px solid #1173a3;
-            background-color: white;
-            margin-right: 31px; }
-            main .container-content .banner .container-cards .cards .card .body {
-              height: 84%;
+            position: relative; }
+            .container-content .banner .container-cards .cards .card .body .info {
+              width: 16px;
+              height: 16px;
+              position: absolute;
+              background-color: #1173a3;
+              right: 5px;
+              top: 5px;
+              border-radius: 50%;
+              display: flex;
+              align-content: center;
+              justify-content: center;
+              cursor: pointer; }
+              .container-content .banner .container-cards .cards .card .body .info svg {
+                width: 16px;
+                height: 16px; }
+                .container-content .banner .container-cards .cards .card .body .info svg .st0 {
+                  fill: white; }
+            .container-content .banner .container-cards .cards .card .body .img,
+            .container-content .banner .container-cards .cards .card .body .descript1,
+            .container-content .banner .container-cards .cards .card .body .descript2 {
+              width: 100%; }
+            .container-content .banner .container-cards .cards .card .body .descript1,
+            .container-content .banner .container-cards .cards .card .body .descript2 {
+              height: 19%;
               display: flex;
               flex-direction: column;
-              position: relative; }
-              main .container-content .banner .container-cards .cards .card .body .info {
-                width: 16px;
-                height: 16px;
-                position: absolute;
-                background-color: #1173a3;
-                right: 5px;
-                top: 5px;
-                border-radius: 50%;
-                display: flex;
-                align-content: center;
-                justify-content: center;
-                cursor: pointer; }
-                main .container-content .banner .container-cards .cards .card .body .info svg {
-                  width: 16px;
-                  height: 16px; }
-                  main .container-content .banner .container-cards .cards .card .body .info svg .st0 {
-                    fill: white; }
-              main .container-content .banner .container-cards .cards .card .body .img,
-              main .container-content .banner .container-cards .cards .card .body .descript1,
-              main .container-content .banner .container-cards .cards .card .body .descript2 {
-                width: 100%; }
-              main .container-content .banner .container-cards .cards .card .body .descript1,
-              main .container-content .banner .container-cards .cards .card .body .descript2 {
-                height: 19%;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between; }
-              main .container-content .banner .container-cards .cards .card .body .img {
-                height: 147px;
-                display: flex;
-                justify-content: center; }
-                main .container-content .banner .container-cards .cards .card .body .img img {
-                  height: 97%; }
-              main .container-content .banner .container-cards .cards .card .body .descript1 {
-                height: 49px; }
-                main .container-content .banner .container-cards .cards .card .body .descript1 .name,
-                main .container-content .banner .container-cards .cards .card .body .descript1 .rating,
-                main .container-content .banner .container-cards .cards .card .body .descript1 .content {
-                  height: 33.3%;
-                  width: 100%;
-                  padding-left: 12px;
-                  display: flex;
-                  align-items: center; }
-                main .container-content .banner .container-cards .cards .card .body .descript1 .name {
-                  font-size: 0.8rem;
-                  font-family: "Roboto", sans-serif;
-                  color: #3f3844; }
-                main .container-content .banner .container-cards .cards .card .body .descript1 .rating {
-                  height: 22%; }
-                main .container-content .banner .container-cards .cards .card .body .descript1 .star {
-                  width: 80px; }
-                main .container-content .banner .container-cards .cards .card .body .descript1 .content {
-                  width: 3rem; }
-                  main .container-content .banner .container-cards .cards .card .body .descript1 .content h6 {
-                    background-color: #f89922;
-                    font-size: 0.8rem;
-                    width: 40px;
-                    height: 17px;
-                    font-family: "Roboto", sans-serif;
-                    color: #3f3844;
-                    border-radius: 2px;
-                    display: flex;
-                    justify-content: center;
-                    color: #f8f8ff;
-                    font-weight: normal; }
-              main .container-content .banner .container-cards .cards .card .body .descript2 {
-                height: 45px; }
-                main .container-content .banner .container-cards .cards .card .body .descript2 .price,
-                main .container-content .banner .container-cards .cards .card .body .descript2 .price-g,
-                main .container-content .banner .container-cards .cards .card .body .descript2 .discount {
-                  width: 100%;
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  font-family: "Roboto", sans-serif;
-                  color: #3f3844; }
-                main .container-content .banner .container-cards .cards .card .body .descript2 .price {
-                  font-size: 1.7rem;
-                  height: 59%;
-                  font-weight: bold; }
-                main .container-content .banner .container-cards .cards .card .body .descript2 .discount {
-                  height: 0;
-                  text-decoration: line-through; }
-                main .container-content .banner .container-cards .cards .card .body .descript2 .price-g {
-                  font-size: 0.7rem;
-                  height: 24%; }
-            main .container-content .banner .container-cards .cards .card .container-buy {
-              height: 16%;
+              justify-content: space-between; }
+            .container-content .banner .container-cards .cards .card .body .img {
+              height: 147px;
               display: flex;
-              justify-content: center;
-              align-items: center;
-              background-color: #1173a3;
-              border-radius: 0 0 12px 12px; }
-              main .container-content .banner .container-cards .cards .card .container-buy .ItemCount,
-              main .container-content .banner .container-cards .cards .card .container-buy .buy {
-                height: 75%;
-                border-radius: 7px; }
-              main .container-content .banner .container-cards .cards .card .container-buy .ItemCount {
-                width: 30%;
-                margin-right: 10px;
-                background-color: white;
+              justify-content: center; }
+              .container-content .banner .container-cards .cards .card .body .img img {
+                height: 97%; }
+            .container-content .banner .container-cards .cards .card .body .descript1 {
+              height: 49px; }
+              .container-content .banner .container-cards .cards .card .body .descript1 .name,
+              .container-content .banner .container-cards .cards .card .body .descript1 .rating,
+              .container-content .banner .container-cards .cards .card .body .descript1 .content {
+                height: 33.3%;
+                width: 100%;
+                padding-left: 12px;
                 display: flex;
-                justify-content: space-between; }
-                main .container-content .banner .container-cards .cards .card .container-buy .ItemCount button {
-                  width: 46%;
-                  border: none;
-                  cursor: pointer;
-                  border-radius: 7px 0 0 7px;
-                  color: white;
-                  font-size: 23px; }
-                main .container-content .banner .container-cards .cards .card .container-buy .ItemCount .btnless {
-                  background-color: #f89822c9; }
-                main .container-content .banner .container-cards .cards .card .container-buy .ItemCount h6 {
-                  width: 60%;
+                align-items: center; }
+              .container-content .banner .container-cards .cards .card .body .descript1 .name {
+                font-size: 0.8rem;
+                font-family: "Roboto", sans-serif;
+                color: #3f3844; }
+              .container-content .banner .container-cards .cards .card .body .descript1 .rating {
+                height: 22%; }
+              .container-content .banner .container-cards .cards .card .body .descript1 .star {
+                width: 80px; }
+              .container-content .banner .container-cards .cards .card .body .descript1 .content {
+                width: 3rem; }
+                .container-content .banner .container-cards .cards .card .body .descript1 .content h6 {
+                  background-color: #f89922;
+                  font-size: 0.8rem;
+                  width: 40px;
+                  height: 17px;
+                  font-family: "Roboto", sans-serif;
+                  color: #3f3844;
+                  border-radius: 2px;
                   display: flex;
                   justify-content: center;
-                  align-items: center;
-                  font-family: 'Roboto', sans-serif;
-                  font-size: 1rem;
-                  color: #3f3844; }
-                main .container-content .banner .container-cards .cards .card .container-buy .ItemCount .btnplus {
-                  border-radius: 0 7px 7px 0;
-                  background-color: #f89822c9; }
-              main .container-content .banner .container-cards .cards .card .container-buy .buy {
-                width: 50%;
-                background-color: #f89922;
+                  color: #f8f8ff;
+                  font-weight: normal; }
+            .container-content .banner .container-cards .cards .card .body .descript2 {
+              height: 45px; }
+              .container-content .banner .container-cards .cards .card .body .descript2 .price,
+              .container-content .banner .container-cards .cards .card .body .descript2 .price-g,
+              .container-content .banner .container-cards .cards .card .body .descript2 .discount {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: "Roboto", sans-serif;
+                color: #3f3844; }
+              .container-content .banner .container-cards .cards .card .body .descript2 .price {
+                font-size: 1.7rem;
+                height: 59%;
+                font-weight: bold; }
+              .container-content .banner .container-cards .cards .card .body .descript2 .discount {
+                height: 0;
+                text-decoration: line-through; }
+              .container-content .banner .container-cards .cards .card .body .descript2 .price-g {
+                font-size: 0.7rem;
+                height: 24%; }
+          .container-content .banner .container-cards .cards .card .container-buy {
+            height: 16%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #1173a3;
+            border-radius: 0 0 12px 12px; }
+            .container-content .banner .container-cards .cards .card .container-buy .ItemCount,
+            .container-content .banner .container-cards .cards .card .container-buy .buy {
+              height: 75%;
+              border-radius: 7px; }
+            .container-content .banner .container-cards .cards .card .container-buy .ItemCount {
+              width: 30%;
+              margin-right: 10px;
+              background-color: white;
+              display: flex;
+              justify-content: space-between; }
+              .container-content .banner .container-cards .cards .card .container-buy .ItemCount button {
+                width: 46%;
                 border: none;
+                cursor: pointer;
+                border-radius: 7px 0 0 7px;
+                color: white;
+                font-size: 23px; }
+              .container-content .banner .container-cards .cards .card .container-buy .ItemCount .btnless {
+                background-color: #f89822c9; }
+              .container-content .banner .container-cards .cards .card .container-buy .ItemCount h6 {
+                width: 60%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: 'Roboto', sans-serif;
+                font-size: 1rem;
+                color: #3f3844; }
+              .container-content .banner .container-cards .cards .card .container-buy .ItemCount .btnplus {
+                border-radius: 0 7px 7px 0;
+                background-color: #f89822c9; }
+            .container-content .banner .container-cards .cards .card .container-buy .buy {
+              width: 50%;
+              background-color: #f89922;
+              border: none;
+              display: flex;
+              align-items: center;
+              justify-content: center; }
+              .container-content .banner .container-cards .cards .card .container-buy .buy button {
+                border: none;
+                background-color: transparent;
+                height: 100%;
+                width: 100%;
                 display: flex;
                 align-items: center;
-                justify-content: center; }
-                main .container-content .banner .container-cards .cards .card .container-buy .buy button {
-                  border: none;
-                  background-color: transparent;
-                  height: 100%;
-                  width: 100%;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  width: 63%;
-                  font-family: "Roboto", sans-serif;
-                  font-size: 1.1rem;
-                  color: #f8f8ff;
-                  cursor: pointer; }
+                justify-content: center;
+                width: 63%;
+                font-family: "Roboto", sans-serif;
+                font-size: 1.1rem;
+                color: #f8f8ff;
+                cursor: pointer; }
 
 #card {
   height: 298px;
@@ -1742,14 +1740,3 @@ main .container-detail {
   left: 18px;
   font-size: 0.7rem;
   color: red; }
-
-.notifications {
-  width: 166px;
-  height: 35px;
-  background-color: red;
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  top: 13px;
-  left: 45%; }
