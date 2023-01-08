@@ -1,6 +1,6 @@
 import SearchIco from "../../../assets/svg/icon-search";
 
-const Search = () => {
+const SearchBar = () => {
     return (
         <div className="search">
             <input type="text" placeholder="Buscar" />
@@ -10,4 +10,4 @@ const Search = () => {
         </div>
     )
 }
-export default Search;
+export default SearchBar;

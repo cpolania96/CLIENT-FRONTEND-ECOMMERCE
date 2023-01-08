@@ -1,20 +1,13 @@
+// Imports**
+@import "../../scss/theme/colors.scss"; 
+@import "./Logo/logo";
+@import "./SearchBar/search.bar";
+@import "./NewsBar/news-bar";
+@import "./Menu/menu";
+
+// Módulo del contenedor del header
 header {
     width: 100%;
-    height: 190px;
-    .container-news {
-        height: 20%;
-        display: flex;
-        justify-content: center;
-        background-color: #23b2f8;
-        .news {
-            height: 100%;
-            width: 80%;
-            background-image: url(/src/assets/img/banner-1025px@330x-100.jpg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position-y: -3px;
-        }
-    }
     .container-principal {
         height: 54%;
         background-color: #f8f8ff;
@@ -22,7 +15,7 @@ header {
         justify-content: center;
         .principal {
             width: 66rem;
-            height: 100%;
+            height: 102px;
             display: flex;
             flex-direction: column;
             .container-first {
@@ -45,7 +38,6 @@ header {
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                        @include roboto;
                         color: #3f3844;
                     }
                     .icon {
@@ -82,68 +74,11 @@ header {
                 .container-tools {
                     width: 20%;
                 }
-                a {
-                    width: 21%;
-                    .container-logo {
-                        position: relative;
-                        width: 21%;
-                        height: 50px;
-                        .logo {
-                            width: 20.2rem;
-                            height: 100%;
-                            background-image: url(/src/assets/img/logo_corporativo.png);
-                            background-repeat: no-repeat;
-                            background-position: center;
-                            background-size: 190px;
-                            position: absolute;
-                            cursor: pointer;
-                        }
-                    }
-                }
                 .container-search {
                     width: 52%;
                     height: 80%;
                     display: flex;
                     justify-content: center;
-                    .search {
-                        height: 100%;
-                        width: 30rem;
-                        display: flex;
-                        input,
-                        button {
-                            border-top: 1px solid $color-principal;
-                            border-bottom: 1px solid $color-principal;
-                            background-color: $color-blanco;
-                        }
-                        input {
-                            width: 89%;
-                            outline: none;
-                            padding-left: 10px;
-                            border-left: 1px solid $color-principal;
-                            border-right: none;
-                            border-radius: 9px 0 0 9px;
-                            font-size: 1.1rem;
-                            @include roboto;
-                            color: $color-texto-secundario;
-                        }
-                        button {
-                            width: 11%;
-                            cursor: pointer;
-                            border-right: 1px solid $color-principal;
-                            border-left: none;
-                            border-radius: 0 9px 9px 0;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            svg {
-                                width: 1.4rem;
-                                height: auto;
-                                .st0 {
-                                    fill: $color-principal;
-                                }
-                            }
-                        }
-                    }
                 }
                 .container-tools {
                     display: flex;
@@ -172,7 +107,7 @@ header {
                                 width: 100%;
                                 height: 100%;
                                 .st0 {
-                                    fill: $color-principal;
+                                    fill: $primary;
                                 }
                             }
                         }
@@ -189,7 +124,7 @@ header {
                         .cart {
                             height: 100%;
                             width: 100%;
-                            background-color: $color-principal;
+                            background-color: $primary;
                             border-radius: 4px;
                             display: flex;
                             cursor: pointer;
@@ -231,7 +166,7 @@ header {
                                     height: 14px;
                                     padding-right: 1px;
                                     padding-bottom: 1px;
-                                    background-color: $color-secundario;
+                                    background-color: $secondary;
                                     position: absolute;
                                     top: 4px;
                                     right: 0px;
@@ -239,13 +174,13 @@ header {
                                     display: flex;
                                     justify-content: center;
                                     align-items: center;
-                                    @include roboto;
+                                    
                                     color: $color-blanco;
                                     font-size: 0.7rem;
                                 }
                             }
                             h6 {
-                                @include roboto;
+                                
                                 color: $color-blanco;
                                 font-size: 0.9rem;
                                 margin-right: 3px;
@@ -266,92 +201,10 @@ header {
         }
     }
     .container-menu {
-        height: 26%;
-        background-color: $color-principal;
+        height: 40px;
+        background-color: $primary;
         display: flex;
         justify-content: center;
-        menu {
-            width: 54rem;
-            height: 100%;
-            display: flex;
-            justify-content: space-between;
-            a {
-                text-decoration: none;
-                width: 12rem;
-                .items {
-                    width: 22%;
-                    display: flex;
-                    justify-content: center;
-                    h6 {
-                        font-size: 1rem;
-                        color: white;
-                        @include roboto;
-                    }
-                }
-                .list-menu {
-                    width: 20%;
-                    align-items: center;
-                    .btn-menu {
-                        width: 10rem;
-                        height: 2.4em;
-                        background-color: $color-secundario;
-                        border-radius: 6px;
-                        display: flex;
-                        cursor: pointer;
-                        &:hover {
-                            .icon > svg {
-                                transform: rotate(180deg);
-                                transition: 0.3s;
-                            }
-                        }
-                        .img,
-                        .label,
-                        .icon {
-                            height: 100%;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                        }
-                        .img {
-                            width: 30%;
-                            svg {
-                                height: auto;
-                                width: 28px;
-                                .st0 {
-                                    fill: white;
-                                }
-                            }
-                        }
-                        h6 {
-                            display: flex;
-                            align-items: center;
-                            width: 50%;
-                            padding-left: 1px;
-                            font-size: 1.2rem;
-                        }
-                        .icon {
-                            width: 20%;
-                            svg {
-                                height: auto;
-                                width: 0.9rem;
-                                margin-right: 9px;
-                                .st0 {
-                                    fill: white;
-                                }
-                            }
-                        }
-                    }
-                }
-                .options {
-                    align-items: center;
-                    width: 100%;
-                    height: 100%;
-                    &:hover {
-                        background-color: #dd810fdb;
-                        cursor: pointer;
-                    }
-                }
-            }
-        }
+        
     }
 }

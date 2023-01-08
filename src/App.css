@@ -1,28 +1,76 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-html {
-  font-size: 16px;
-  overflow-y: scroll;
-  overflow-x: hidden; }
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+a {
+  height: 100%;
+  width: 21%;
+  position: relative; }
+  a .container-logo {
+    position: absolute;
+    left: 17px;
+    top: -5px;
+    height: 50px; }
 
-* {
-  margin: 0;
-  padding: 0; }
-
-header {
-  width: 100%;
-  height: 190px; }
-  header .container-news {
-    height: 20%;
+.search {
+  height: 100%;
+  width: 30rem;
+  display: flex; }
+  .search input,
+  .search button {
+    border-top: 1px solid #9E1460;
+    border-bottom: 1px solid #9E1460;
+    background-color: #f8f8ff; }
+  .search input {
+    width: 89%;
+    outline: none;
+    padding-left: 10px;
+    border-left: 1px solid #9E1460;
+    border-right: none;
+    border-radius: 9px 0 0 9px;
+    font-size: 1.1rem;
+    color: #3F3844; }
+  .search button {
+    width: 11%;
+    cursor: pointer;
+    border-right: 1px solid #9E1460;
+    border-left: none;
+    border-radius: 0 9px 9px 0;
     display: flex;
     justify-content: center;
-    background-color: #23b2f8; }
-    header .container-news .news {
-      height: 100%;
-      width: 80%;
-      background-image: url(/src/assets/img/banner-1025px@330x-100.jpg);
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position-y: -3px; }
+    align-items: center; }
+    .search button svg {
+      width: 1.4rem;
+      height: auto; }
+      .search button svg .st0 {
+        fill: #9E1460; }
+
+.container-news {
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  background-color: #EB3699; }
+  .container-news .news {
+    height: 100%;
+    width: 80%; }
+
+menu {
+  width: 54rem;
+  height: 100%;
+  display: flex;
+  justify-content: space-between; }
+  menu a {
+    width: 10rem;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none; }
+    menu a h2 {
+      color: white; }
+    menu a:hover {
+      background-color: #ffffff21; }
+
+header {
+  width: 100%; }
   header .container-principal {
     height: 54%;
     background-color: #f8f8ff;
@@ -30,7 +78,7 @@ header {
     justify-content: center; }
     header .container-principal .principal {
       width: 66rem;
-      height: 100%;
+      height: 102px;
       display: flex;
       flex-direction: column; }
       header .container-principal .principal .container-first {
@@ -53,7 +101,6 @@ header {
             display: flex;
             align-items: center;
             justify-content: center;
-            font-family: 'Roboto', sans-serif;
             color: #3f3844; }
           header .container-principal .principal .container-first .social .icon {
             height: 100%;
@@ -82,59 +129,11 @@ header {
         header .container-principal .principal .container-second .container-logo,
         header .container-principal .principal .container-second .container-tools {
           width: 20%; }
-        header .container-principal .principal .container-second a {
-          width: 21%; }
-          header .container-principal .principal .container-second a .container-logo {
-            position: relative;
-            width: 21%;
-            height: 50px; }
-            header .container-principal .principal .container-second a .container-logo .logo {
-              width: 20.2rem;
-              height: 100%;
-              background-image: url(/src/assets/img/logo_corporativo.png);
-              background-repeat: no-repeat;
-              background-position: center;
-              background-size: 190px;
-              position: absolute;
-              cursor: pointer; }
         header .container-principal .principal .container-second .container-search {
           width: 52%;
           height: 80%;
           display: flex;
           justify-content: center; }
-          header .container-principal .principal .container-second .container-search .search {
-            height: 100%;
-            width: 30rem;
-            display: flex; }
-            header .container-principal .principal .container-second .container-search .search input,
-            header .container-principal .principal .container-second .container-search .search button {
-              border-top: 1px solid #F89922;
-              border-bottom: 1px solid #F89922;
-              background-color: #f8f8ff; }
-            header .container-principal .principal .container-second .container-search .search input {
-              width: 89%;
-              outline: none;
-              padding-left: 10px;
-              border-left: 1px solid #F89922;
-              border-right: none;
-              border-radius: 9px 0 0 9px;
-              font-size: 1.1rem;
-              font-family: 'Roboto', sans-serif;
-              color: #3F3844; }
-            header .container-principal .principal .container-second .container-search .search button {
-              width: 11%;
-              cursor: pointer;
-              border-right: 1px solid #F89922;
-              border-left: none;
-              border-radius: 0 9px 9px 0;
-              display: flex;
-              justify-content: center;
-              align-items: center; }
-              header .container-principal .principal .container-second .container-search .search button svg {
-                width: 1.4rem;
-                height: auto; }
-                header .container-principal .principal .container-second .container-search .search button svg .st0 {
-                  fill: #F89922; }
         header .container-principal .principal .container-second .container-tools {
           display: flex;
           justify-content: space-between;
@@ -164,7 +163,7 @@ header {
                 height: 100%; }
                 header .container-principal .principal .container-second .container-tools .profile a svg .st0,
                 header .container-principal .principal .container-second .container-tools .track a svg .st0 {
-                  fill: #F89922; }
+                  fill: #9E1460; }
           header .container-principal .principal .container-second .container-tools .track a {
             width: 20px; }
           header .container-principal .principal .container-second .container-tools .container-cart {
@@ -174,7 +173,7 @@ header {
             header .container-principal .principal .container-second .container-tools .container-cart .cart {
               height: 100%;
               width: 100%;
-              background-color: #F89922;
+              background-color: #9E1460;
               border-radius: 4px;
               display: flex;
               cursor: pointer;
@@ -207,7 +206,7 @@ header {
                   height: 14px;
                   padding-right: 1px;
                   padding-bottom: 1px;
-                  background-color: #1173a3;
+                  background-color: #EB3699;
                   position: absolute;
                   top: 4px;
                   right: 0px;
@@ -215,11 +214,9 @@ header {
                   display: flex;
                   justify-content: center;
                   align-items: center;
-                  font-family: 'Roboto', sans-serif;
                   color: #f8f8ff;
                   font-size: 0.7rem; }
               header .container-principal .principal .container-second .container-tools .container-cart .cart h6 {
-                font-family: 'Roboto', sans-serif;
                 color: #f8f8ff;
                 font-size: 0.9rem;
                 margin-right: 3px;
@@ -231,74 +228,21 @@ header {
                   width: 12px;
                   transform: rotate(180deg); }
   header .container-menu {
-    height: 26%;
-    background-color: #F89922;
+    height: 40px;
+    background-color: #9E1460;
     display: flex;
     justify-content: center; }
-    header .container-menu menu {
-      width: 54rem;
-      height: 100%;
-      display: flex;
-      justify-content: space-between; }
-      header .container-menu menu a {
-        text-decoration: none;
-        width: 12rem; }
-        header .container-menu menu a .items {
-          width: 22%;
-          display: flex;
-          justify-content: center; }
-          header .container-menu menu a .items h6 {
-            font-size: 1rem;
-            color: white;
-            font-family: 'Roboto', sans-serif; }
-        header .container-menu menu a .list-menu {
-          width: 20%;
-          align-items: center; }
-          header .container-menu menu a .list-menu .btn-menu {
-            width: 10rem;
-            height: 2.4em;
-            background-color: #1173a3;
-            border-radius: 6px;
-            display: flex;
-            cursor: pointer; }
-            header .container-menu menu a .list-menu .btn-menu:hover .icon > svg {
-              transform: rotate(180deg);
-              transition: 0.3s; }
-            header .container-menu menu a .list-menu .btn-menu .img,
-            header .container-menu menu a .list-menu .btn-menu .label,
-            header .container-menu menu a .list-menu .btn-menu .icon {
-              height: 100%;
-              display: flex;
-              justify-content: center;
-              align-items: center; }
-            header .container-menu menu a .list-menu .btn-menu .img {
-              width: 30%; }
-              header .container-menu menu a .list-menu .btn-menu .img svg {
-                height: auto;
-                width: 28px; }
-                header .container-menu menu a .list-menu .btn-menu .img svg .st0 {
-                  fill: white; }
-            header .container-menu menu a .list-menu .btn-menu h6 {
-              display: flex;
-              align-items: center;
-              width: 50%;
-              padding-left: 1px;
-              font-size: 1.2rem; }
-            header .container-menu menu a .list-menu .btn-menu .icon {
-              width: 20%; }
-              header .container-menu menu a .list-menu .btn-menu .icon svg {
-                height: auto;
-                width: 0.9rem;
-                margin-right: 9px; }
-                header .container-menu menu a .list-menu .btn-menu .icon svg .st0 {
-                  fill: white; }
-        header .container-menu menu a .options {
-          align-items: center;
-          width: 100%;
-          height: 100%; }
-          header .container-menu menu a .options:hover {
-            background-color: #dd810fdb;
-            cursor: pointer; }
+
+html {
+  font-size: 16px;
+  overflow-y: scroll;
+  overflow-x: hidden; }
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px; }
 
 main {
   width: 100%;
@@ -1798,3 +1742,14 @@ main .container-detail {
   left: 18px;
   font-size: 0.7rem;
   color: red; }
+
+.notifications {
+  width: 166px;
+  height: 35px;
+  background-color: red;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 13px;
+  left: 45%; }

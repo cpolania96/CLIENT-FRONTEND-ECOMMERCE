@@ -1,29 +1,30 @@
+// Importaciones
 import React from "react";
-import CartContainer from "../../CartWidget/CartContainer";
-import Menu from "./menu";
-import News from "./news";
-import Profile from "../../../assets/svg/profile";
-import Search from "./search";
-import Social from "../../../assets/svg/social";
-import Track from "../../../assets/svg/track";
-import { Link } from "react-router-dom";
+import CartContainer from "../CartWidget/CartContainer";
+import Menu from "./Menu/Menu";
+import Profile from "../../assets/svg/profile";
+import Track from "../../assets/svg/track";
+import SearchBar from "./SearchBar/SearchBar";
+import Logo from "./Logo/Logo";
+import SocialBar from "./SocialBar/SocialBar";
+import NewsBar from "./NewsBar/NewsBar";
+
+// Modulo contenedor de header
 const Header = () => {
+    
+    // Return del componente
     return (
         <header>
-            <News />
+            <NewsBar />
             <div className="container-principal">
                 <div className="principal">
                     <div className="container-first">
-                        <Social />
+                        <SocialBar />
                     </div>
                     <div className="container-second">
-                        <Link to="donbigotes/">
-                            <div className="container-logo">
-                                <div className="logo"></div>
-                            </div>
-                        </Link>
+                        <Logo />
                         <div className="container-search">
-                            <Search />
+                            <SearchBar />
                         </div>
                         <div className="container-tools">
                             <Profile />
@@ -32,9 +33,6 @@ const Header = () => {
                                 <CartContainer />
                             </div>
                         </div>
-                    </div>
-                    <div className="container-third">
-                        <div></div>
                     </div>
                 </div>
             </div>

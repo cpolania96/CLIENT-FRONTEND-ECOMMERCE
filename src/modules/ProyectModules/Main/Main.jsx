@@ -4,6 +4,7 @@ import InfoLabel from './InfoLabel'
 
 function Main() {
     const TITLE2 = "Los más vendidos..."
+ 
     return (
         <main>
             <div className="container-content">

@@ -1,8 +1,8 @@
-import YoutubeIco from "./icon-youtube";
-import InstagramIco from "./icon-instagram";
-import FacebookIco from "./icon-facebook";
+import YoutubeIco from "../../../assets/svg/icon-youtube";
+import InstagramIco from "../../../assets/svg/icon-instagram";
+import FacebookIco from "../../../assets/svg/icon-facebook";
 
-const Social = () => {
+const SocialBar = () => {
     return (
         <div className="social">
             <div className="label">Síguenos</div>
@@ -19,4 +19,4 @@ const Social = () => {
     );
 }
 
-export default Social;
+export default SocialBar;

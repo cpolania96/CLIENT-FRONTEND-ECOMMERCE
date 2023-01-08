@@ -1,0 +1,21 @@
+// Estilos del módulo de gestion del menu
+menu {
+    width: 54rem;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    a {
+        width: 10rem;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        h2 {
+            color: white;
+        }
+        &:hover {
+            background-color: #ffffff21;
+        }
+    }
+}

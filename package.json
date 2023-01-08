@@ -6,11 +6,16 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "build-css": "node-sass --include-path scss src/scss/app.scss src/App.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
   },
   "dependencies": {
+    "node-sass": "^8.0.0",
+    "nodemon": "^2.0.20",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hot-toast": "^2.4.0",
     "react-router-dom": "^6.6.1"
   },
   "devDependencies": {

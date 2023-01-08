@@ -1,0 +1,12 @@
+// Estilos de módulo del banner de información
+
+.container-news {
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    background-color: $secondary;
+    .news {
+        height: 100%;
+        width: 80%;
+    }
+}

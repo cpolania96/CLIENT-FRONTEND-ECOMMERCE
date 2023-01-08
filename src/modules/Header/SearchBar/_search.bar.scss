@@ -1,0 +1,39 @@
+// Estilos del módulo de búsqueda
+.search {
+    height: 100%;
+    width: 30rem;
+    display: flex;
+    input,
+    button {
+        border-top: 1px solid $primary;
+        border-bottom: 1px solid $primary;
+        background-color: $color-blanco;
+    }
+    input {
+        width: 89%;
+        outline: none;
+        padding-left: 10px;
+        border-left: 1px solid $primary;
+        border-right: none;
+        border-radius: 9px 0 0 9px;
+        font-size: 1.1rem;
+        color: $color-texto-secundario;
+    }
+    button {
+        width: 11%;
+        cursor: pointer;
+        border-right: 1px solid $primary;
+        border-left: none;
+        border-radius: 0 9px 9px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        svg {
+            width: 1.4rem;
+            height: auto;
+            .st0 {
+                fill: $primary;
+            }
+        }
+    }
+}
