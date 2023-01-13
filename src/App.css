@@ -287,51 +287,72 @@ html {
             margin-top: 9px; }
           .banner-icons ul li div h3:last-child {
             font-size: 0.8rem;
-            font-weight: lighter; }
+            font-weight: 400; }
+
+.buttons {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0; }
+  .buttons .selector {
+    height: 100%;
+    width: 9%;
+    position: relative;
+    background-color: transparent;
+    border: none; }
+    .buttons .selector:hover {
+      background-color: rgba(0, 0, 0, 0.115);
+      transition: 0.4s;
+      cursor: pointer; }
+    .buttons .selector svg {
+      width: 43%;
+      height: auto;
+      position: relative; }
+      .buttons .selector svg .st0 {
+        fill: #9E1460; }
+  .buttons .selector-iz svg {
+    transform: rotate(90deg); }
+  .buttons .selector-der svg {
+    transform: rotate(270deg); }
+
+.banner-carousell {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  position: relative;
+  background-color: grey; }
+  .banner-carousell .view {
+    display: flex;
+    overflow-x: scroll; }
+    .banner-carousell .view::-webkit-scrollbar {
+      display: none; }
+  .banner-carousell .container-indicator {
+    width: 6%;
+    height: 2rem;
+    position: absolute;
+    bottom: 1px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+    .banner-carousell .container-indicator .indicator {
+      height: 12px;
+      width: 12px;
+      border: 2px solid #fff;
+      border-radius: 50%; }
+
+.i1 {
+  background-color: #9E1460; }
 
 .container-content {
   width: 100%;
   height: 98%;
   background-color: #f8f8ff; }
-  .container-content .banner-carousell {
-    width: 100%;
-    height: 19rem;
-    border-top: 1px solid #3f384417;
-    border-bottom: 1px solid #3f384417;
-    display: flex;
-    justify-content: space-between;
-    position: relative; }
-    .container-content .banner-carousell .selector {
-      height: 100%;
-      width: 85px;
-      border: none;
-      background-color: #f8f8ff;
-      cursor: pointer; }
-      .container-content .banner-carousell .selector svg {
-        width: 37px;
-        height: auto; }
-        .container-content .banner-carousell .selector svg .st0 {
-          fill: #1173a3;
-          -webkit-box-shadow: 1px 11px 32px 8px rgba(63, 56, 68, 0.66);
-          box-shadow: 1px 11px 32px 8px rgba(63, 56, 68, 0.66); }
-    .container-content .banner-carousell .container-indicator {
-      width: 15%;
-      height: 2rem;
-      position: absolute;
-      bottom: 1px;
-      left: 0;
-      right: 0;
-      margin: auto;
-      display: flex;
-      justify-content: space-around;
-      align-items: center; }
-      .container-content .banner-carousell .container-indicator .indicator {
-        height: 12px;
-        width: 12px;
-        border: 1px solid #1173a3;
-        border-radius: 50%; }
-      .container-content .banner-carousell .container-indicator .i1 {
-        background-color: #1173a3; }
   .container-content .banner-cards,
   .container-content .menu-mascotas,
   .container-content .banner {

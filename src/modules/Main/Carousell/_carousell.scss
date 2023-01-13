@@ -1,0 +1,43 @@
+// Imports**
+@import "./Button/button-carousell";
+
+// Estilos para módulo de banner carousell
+
+.banner-carousell {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    position: relative;
+    background-color: grey;
+    .view {
+        display: flex;
+        overflow-x: scroll;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        img {
+
+        }
+    }
+    .container-indicator {
+        width: 6%;
+        height: 2rem;
+        position: absolute;
+        bottom: 1px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .indicator {
+            height: 12px;
+            width: 12px;
+            border: 2px solid #fff;
+            border-radius: 50%;
+        }
+    }
+}
+.i1 {
+    background-color: $primary;
+}

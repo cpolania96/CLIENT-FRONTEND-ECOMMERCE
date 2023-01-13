@@ -1,5 +1,6 @@
 // Imports **
-@import "../BannerIcons/banner-icons";
+@import "./BannerIcons/banner-icons";
+@import "./Carousell/carousell";
 
 // Estilos del módulo main
 
@@ -7,52 +8,6 @@
     width: 100%;
     height: 98%;
     background-color: #f8f8ff;
-    .banner-carousell {
-        width: 100%;
-        height: 19rem;
-        border-top: 1px solid #3f384417;
-        border-bottom: 1px solid #3f384417;
-        display: flex;
-        justify-content: space-between;
-        position: relative;
-        .selector {
-            height: 100%;
-            width: 85px;
-            border: none;
-            background-color: #f8f8ff;
-            cursor: pointer;
-            svg {
-                width: 37px;
-                height: auto;
-                .st0 {
-                    fill: #1173a3;
-                    -webkit-box-shadow: 1px 11px 32px 8px rgba(63, 56, 68, 0.66);
-                    box-shadow: 1px 11px 32px 8px rgba(63, 56, 68, 0.66);
-                }
-            }
-        }
-        .container-indicator {
-            width: 15%;
-            height: 2rem;
-            position: absolute;
-            bottom: 1px;
-            left: 0;
-            right: 0;
-            margin: auto;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            .indicator {
-                height: 12px;
-                width: 12px;
-                border: 1px solid #1173a3;
-                border-radius: 50%;
-            }
-            .i1 {
-                background-color: #1173a3;
-            }
-        }
-    }
     .banner-cards,
     .menu-mascotas,
     .banner {

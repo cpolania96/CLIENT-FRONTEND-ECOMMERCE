@@ -1,8 +1,8 @@
 // Imports **
 import React from 'react'
-import IconDelivery from '../../assets/svg/IconDelivery'
-import IconSecure from '../../assets/svg/IconSecure'
-import IconWallet from '../../assets/svg/IconWallet'
+import IconDelivery from '../../../assets/svg/IconDelivery'
+import IconSecure from '../../../assets/svg/IconSecure'
+import IconWallet from '../../../assets/svg/IconWallet'
 
 // Módulo de iconos
 function BannerIcons() {
