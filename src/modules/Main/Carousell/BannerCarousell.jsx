@@ -1,69 +1,94 @@
-import React, { useRef, useState, useEffect } from 'react';
-import ButtonCarousell from './Button/ButtonCarousell';
-function BannerCarousell() {
-    const [selector, setSelector] = useState(null)
-    let carousell = useRef()
-    const sources =
-    {
-        desktop: [
-            {
-                id: 'BC-2',
-                source: 'https://res.cloudinary.com/devsy44f3/image/upload/v1673583484/Magibell/Recursos/Inicio-Carousell/banner_3_hj70xk.png'
-            },
-            {
-                id: 'BC-3',
-                source: 'https://res.cloudinary.com/devsy44f3/image/upload/v1673583692/Magibell/Recursos/Inicio-Carousell/banner_4_etcskp.png'
-            },
-        ],
-        mobile: [
-            {
-                id: 'BCm-1',
-                source: 'https://res.cloudinary.com/devsy44f3/image/upload/v1673558609/Magibell/Recursos/Inicio-Carousell/2_saga5z.jpg'
-            }
-        ]
-    }
-    console.log(carousell);
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import {
+  Carousel,
+  CarouselItem,
+  CarouselControl,
+  CarouselIndicators
+} from 'reactstrap';
+import 'bootstrap/dist/css/bootstrap.css'
 
+const items = [
+  {
+    src: 'https://res.cloudinary.com/devsy44f3/image/upload/v1673583692/Magibell/Recursos/Inicio-Carousell/banner_4_etcskp.png',
+    link: 'https://google.com/'
+  },
+  {
+    src: 'https://res.cloudinary.com/devsy44f3/image/upload/v1673583484/Magibell/Recursos/Inicio-Carousell/banner_3_hj70xk.png',
+    link: ''
+  }
+];
 
-    const btnSelected = (prop) => {
-        let windowWidth = window.innerWidth
-        if (prop === 'right') {
-            carousell.current.scrollLeft = carousell.current.scrollLeft + windowWidth
-        } else if (prop === 'left') {
-            carousell.current.scrollLeft = carousell.current.scrollLeft - windowWidth
-        }
-    }
-    useEffect(() => {
-        btnSelected(selector)
-    }, [selector])
+class BannerCarousell extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { activeIndex: 0 };
+    this.next = this.next.bind(this);
+    this.previous = this.previous.bind(this);
+    this.goToIndex = this.goToIndex.bind(this);
+    this.onExiting = this.onExiting.bind(this);
+    this.onExited = this.onExited.bind(this);
+  }
 
+  onExiting() {
+    this.animating = true;
+  }
+
+  onExited() {
+    this.animating = false;
+  }
+
+  next() {
+    if (this.animating) return;
+    const nextIndex = this.state.activeIndex === items.length - 1 ? 0 : this.state.activeIndex + 1;
+    this.setState({ activeIndex: nextIndex });
+  }
+
+  previous() {
+    if (this.animating) return;
+    const nextIndex = this.state.activeIndex === 0 ? items.length - 1 : this.state.activeIndex - 1;
+    this.setState({ activeIndex: nextIndex });
+  }
+
+  goToIndex(newIndex) {
+    if (this.animating) return;
+    this.setState({ activeIndex: newIndex });
+  }
+
+  render() {
+    const { activeIndex } = this.state;
+
+    const slides = items.map((item) => {
+      return (
+        <CarouselItem
+          onExiting={this.onExiting}
+          onExited={this.onExited}
+          key={item.src}
+        >
+          <Link to={item.link}>
+            <img src={item.src} alt={item.altText} />
+          </Link>
+        </CarouselItem>
+      );
+    });
 
     return (
-        <div className="banner-carousell">
-            <ButtonCarousell setSelector={setSelector} selector={selector} />
-            <div
-                className='view'
-                ref={carousell}
-            >
-                {
-                    sources.desktop.map(item => (
-                        <>
-                            <img key={item.id} src={item.source} alt="" />
-                            <div className="container-indicator">
-                                {sources.desktop.map(ind => (
-                                <div
-                                key={ind.id}
-                                    className={`indicator`} 
-                                >
-                                </div>
-                                ))}
-                            </div>
-                        </>
-                    ))
-                }
-            </div>
-        </div>
-    )
+      <Carousel
+        activeIndex={activeIndex}
+        next={this.next}
+        previous={this.previous}
+      >
+        <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
+        {slides}
+        <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
+        <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
+      </Carousel>
+    );
+  }
 }
 
-export default BannerCarousell
+
+export default BannerCarousell;
+
+
+

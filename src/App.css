@@ -67,7 +67,8 @@ menu {
     align-items: center;
     text-decoration: none; }
     menu a h2 {
-      color: white; }
+      color: white;
+      margin: 0 !important; }
     menu a:hover {
       background-color: #ffffff21; }
 
@@ -246,6 +247,9 @@ html {
   font-family: 'Roboto', sans-serif;
   font-size: 16px; }
 
+h2 {
+  font-size: 16px !important; }
+
 .banner-icons {
   width: 100%;
   height: 60px;
@@ -280,7 +284,8 @@ html {
         align-items: flex-start; }
         .banner-icons ul li div h3 {
           color: #3F3844;
-          height: 35%; }
+          height: 35%;
+          margin: 0; }
           .banner-icons ul li div h3:first-child {
             font-size: 0.9rem;
             font-weight: bold;
@@ -289,65 +294,61 @@ html {
             font-size: 0.8rem;
             font-weight: 400; }
 
-.buttons {
+.carousel {
   width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  display: flex;
-  justify-content: space-between;
-  padding: 0; }
-  .buttons .selector {
+  margin: 5px auto;
+  border-radius: 0px;
+  overflow: hidden; }
+  .carousel .carousel-inner {
     height: 100%;
-    width: 9%;
-    position: relative;
-    background-color: transparent;
-    border: none; }
-    .buttons .selector:hover {
-      background-color: rgba(0, 0, 0, 0.115);
-      transition: 0.4s;
-      cursor: pointer; }
-    .buttons .selector svg {
-      width: 43%;
-      height: auto;
-      position: relative; }
-      .buttons .selector svg .st0 {
-        fill: #9E1460; }
-  .buttons .selector-iz svg {
-    transform: rotate(90deg); }
-  .buttons .selector-der svg {
-    transform: rotate(270deg); }
-
-.banner-carousell {
-  width: 100%;
-  height: 400px;
-  display: flex;
-  position: relative;
-  background-color: grey; }
-  .banner-carousell .view {
-    display: flex;
-    overflow-x: scroll; }
-    .banner-carousell .view::-webkit-scrollbar {
-      display: none; }
-  .banner-carousell .container-indicator {
-    width: 6%;
-    height: 2rem;
-    position: absolute;
-    bottom: 1px;
-    left: 0;
-    right: 0;
-    margin: auto;
-    display: flex;
-    justify-content: space-around;
+    width: 100%; }
+    .carousel .carousel-inner .carousel-item {
+      height: 100%; }
+      .carousel .carousel-inner .carousel-item img {
+        height: 100%; }
+  .carousel .carousel-control-prev .carousel-control-prev-icon,
+  .carousel .carousel-control-prev .carousel-control-next-icon,
+  .carousel .carousel-control-next .carousel-control-prev-icon,
+  .carousel .carousel-control-next .carousel-control-next-icon {
+    height: 50%;
+    background-image: url("https://res.cloudinary.com/devsy44f3/image/upload/v1673804040/Icons/flecha_p4rfen.svg");
+    background-size: 40px; }
+  .carousel .carousel-control-prev .carousel-control-prev-icon,
+  .carousel .carousel-control-next .carousel-control-prev-icon {
+    transform: rotate(180deg); }
+  .carousel .carousel-control-prev:hover,
+  .carousel .carousel-control-next:hover {
+    background-color: rgba(0, 0, 0, 0.079); }
+  .carousel .carousel-indicators {
     align-items: center; }
-    .banner-carousell .container-indicator .indicator {
-      height: 12px;
-      width: 12px;
-      border: 2px solid #fff;
-      border-radius: 50%; }
+    .carousel .carousel-indicators button {
+      border-radius: 50%;
+      height: 18px;
+      width: 18px;
+      background-color: #9E1460;
+      border: none; }
+    .carousel .carousel-indicators .active {
+      border: 1px solid white; }
 
-.i1 {
-  background-color: #9E1460; }
+@media (min-width: 375px) {
+  .carousel {
+    height: 100%; } }
+
+@media (min-width: 424px) {
+  .carousel {
+    height: 270px; } }
+
+@media (min-width: 768px) {
+  .carousel {
+    height: 18rem; } }
+
+@media (min-width: 1024px) {
+  .carousel {
+    height: 20rem; } }
+
+@media (min-width: 1348px) {
+  .carousel {
+    height: 400px; } }
 
 .container-content {
   width: 100%;
