@@ -23,7 +23,7 @@ const App = () => {
                     <Route exact path='/cart' element={<Cart />} />
                     <Route exact path='/cart/checkout' element={<Checkout />} />
                 </Routes>
-                <Footer />
+                {/* <Footer /> */}
             </BrowserRouter>
         </CartContextProvider>
 

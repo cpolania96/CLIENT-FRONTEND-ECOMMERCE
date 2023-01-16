@@ -1,7 +1,6 @@
 // Estilos del módulo de logo
 .container-logo {
     height: 100%;
-    width: 100%;
     position: relative;
     a {
         position: absolute;
@@ -11,5 +10,47 @@
         img {
             width: 100%;
         }
+    }
+}
+@media (max-width: 1440px) {
+    .container-logo {
+        width: 162px;
+    }
+}
+@media (max-width: 1366px) {
+    .container-logo {
+        width: 162px;
+    }
+}
+@media (max-width: 1024px) {
+    .container-logo {
+        width: 162px;
+    }
+}
+@media (max-width: 768px) {
+    .container-logo {
+        width: 152px;
+    }
+}
+@media (max-width: 425px) {
+    .container-logo {
+        width: 31%;
+        position: absolute;
+        left: 34%;
+        a {
+            position: initial;
+        }
+    }
+}
+@media (max-width: 375px) { 
+    .container-logo {
+        width: 36%;
+        left: 31%;
+    }
+}
+@media (max-width: 320px) { 
+    .container-logo {
+        width: 40%;
+        left: 30%;
     }
 }

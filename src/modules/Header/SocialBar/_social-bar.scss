@@ -1,0 +1,115 @@
+// Estilos del componente SocialBar
+.container-social {
+    height: 1.6rem;
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    margin-top: 3px;
+    .social {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .label {
+            border-right: 1px solid #3f3844;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #3f3844;
+        }
+        .icon {
+            height: 100%;
+            margin-left: 4px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            svg {
+                height: auto;
+                width: 20px;
+                .st0 {
+                    fill: #3f3844;
+                }
+            }
+        }
+    }
+}
+
+// MEDIAQUERIES
+@media (max-width: 1440px) {
+    .social {
+        width: 13%;
+        margin-right: 39px;
+        .label {
+            width: 47%;
+        }
+        .icon {
+            width: 17px;
+        }
+    }
+}
+@media (max-width: 1366px) {
+    .social {
+        width: 13%;
+        margin-right: 39px;
+        .label {
+            width: 47%;
+        }
+        .icon {
+            width: 17px;
+        }
+    }
+}
+@media (max-width: 1024px) {
+    .social {
+        width: 17%;
+        margin-right: 22px;
+        .label {
+            width: 47%;
+        }
+        .icon {
+            width: 17px;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .social {
+        width: 23%;
+        margin-right: 25px;
+        .label {
+            width: 45%;
+        }
+        .icon {
+            width: 16px;
+        }
+    }
+}
+@media (max-width: 425px) {
+    .container-social {
+        .social {
+            width: 38%;
+            margin-right: 12px;
+            .label {
+                font-size: 14px;
+                width: 48%;
+            }
+            .icon {
+                width: 15px;
+            }
+        }
+    }
+}
+@media (max-width: 375px) {
+    .container-social {
+        .social {
+            width: 44%;
+        }
+    }
+}
+@media (max-width: 320px) {
+    .container-social {
+        .social {
+            width: 47%;
+        }
+    }
+}

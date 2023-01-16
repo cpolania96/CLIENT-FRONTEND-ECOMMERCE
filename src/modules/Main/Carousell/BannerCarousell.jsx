@@ -18,7 +18,6 @@ const items = [
     link: ''
   }
 ];
-
 class BannerCarousell extends Component {
   constructor(props) {
     super(props);
@@ -54,24 +53,30 @@ class BannerCarousell extends Component {
     if (this.animating) return;
     this.setState({ activeIndex: newIndex });
   }
-
   render() {
     const { activeIndex } = this.state;
 
-    const slides = items.map((item) => {
-      return (
-        <CarouselItem
-          onExiting={this.onExiting}
-          onExited={this.onExited}
-          key={item.src}
-        >
-          <Link to={item.link}>
-            <img src={item.src} alt={item.altText} />
-          </Link>
-        </CarouselItem>
-      );
-    });
-
+    const slides = () => {
+      const viewWidth = window.innerWidth
+      if(viewWidth < 425) {
+        return 
+      }else {
+        return items.map((item) => {
+          return (
+            <CarouselItem
+              onExiting={this.onExiting}
+              onExited={this.onExited}
+              key={item.src}
+            >
+              <Link to={item.link}>
+                <img src={item.src} alt={item.altText} />
+              </Link>
+            </CarouselItem>
+          );
+        })
+      }
+    }
+  
     return (
       <Carousel
         activeIndex={activeIndex}
@@ -79,7 +84,7 @@ class BannerCarousell extends Component {
         previous={this.previous}
       >
         <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
-        {slides}
+        {slides()}
         <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
         <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
       </Carousel>

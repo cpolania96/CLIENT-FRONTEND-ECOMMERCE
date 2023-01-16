@@ -8,8 +8,8 @@ function Main() {
     return (
         <div className="container-content">
             <BannerIcons />
-            <BannerCarousell />
-            <ContainerBanner TITLE={TITLE2} />
+            {/* <BannerCarousell /> */}
+            {/* <ContainerBanner TITLE={TITLE2} /> */}
         </div>
     )
 }

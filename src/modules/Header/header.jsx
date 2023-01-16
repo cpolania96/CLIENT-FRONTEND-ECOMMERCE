@@ -11,34 +11,32 @@ import NewsBar from "./NewsBar/NewsBar";
 
 // Modulo contenedor de header
 const Header = () => {
-    
+
     // Return del componente
     return (
         <header>
             <NewsBar />
-            <div className="container-principal">
-                <div className="principal">
-                    <div className="container-first">
-                        <SocialBar />
+            <div className="container-header">
+                <div className="container-social">
+                    <SocialBar />
+                </div>
+                <div className="container-principal">
+                    <Logo />
+                    <div className="container-search">
+                        <SearchBar />
                     </div>
-                    <div className="container-second">
-                        <Logo />
-                        <div className="container-search">
-                            <SearchBar />
-                        </div>
-                        <div className="container-tools">
-                            <Profile />
-                            <Track />
-                            <div className="container-cart">
-                                <CartContainer />
-                            </div>
+                    <div className="container-tools">
+                        <Profile />
+                        <Track />
+                        <div className="container-cart">
+                            <CartContainer />
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="container-menu">
+            {/* <div className="container-menu">
                 <Menu />
-            </div>
+            </div> */}
         </header>
     )
 }
