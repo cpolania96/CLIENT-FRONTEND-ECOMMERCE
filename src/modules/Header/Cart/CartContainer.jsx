@@ -1,8 +1,8 @@
 import { useContext, useState, createRef } from "react";
-import ArrowIco from "../../assets/svg/icon-arrow";
-import CartIco from "../../assets/svg/icon-cart";
-import { CartContext } from "../../Context/cartContext";
-import ContainerCart from "./CartDropdown";
+import ArrowIco from "../../../assets/svg/icon-arrow";
+import CartIco from "../../../assets/svg/icon-cart";
+import { CartContext } from "../../../Context/cartContext";
+import ContainerCart from "../../CartWidget/CartDropdown";
 
 const CartContainer = () => {
     const [cartVisible, setCartVisible] = useState(false)
@@ -17,8 +17,8 @@ const CartContainer = () => {
         }
     }
     return (
-        <>
-            <div className="cart"
+        <div className="container-cart">
+            <div className="cart-desktop"
                 onMouseEnter={() => { setCartVisible(true) }}
                 onMouseLeave={() => { setCartVisible(false) }}
             >
@@ -33,8 +33,10 @@ const CartContainer = () => {
                 {cartVisible && <ContainerCart />}
                 {/* <ContainerCart /> */}
             </div>
-
-        </>
+            <div className="cart-mobile">
+                {globoIsVisible()}
+            </div>
+        </div>
     )
 }
 export default CartContainer;

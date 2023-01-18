@@ -5,6 +5,8 @@
 @import "./NewsBar/news-bar";
 @import "./Menu/menu";
 @import "./SocialBar/social-bar";
+@import "./Tools/tools";
+@import "./Cart/cart-container";
 
 // Módulo del contenedor del header
 header {
@@ -14,145 +16,20 @@ header {
         display: flex;
         flex-direction: column;
         align-items: center;
+        .container-social,
         .container-principal {
             width: 80%;
         }
-        
+        .container-social {
+            height: 1.6rem;
+            display: flex;
+            justify-content: right;
+        }
         .container-principal {
             height: 71px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            .container-logo,
-            .container-search,
-            .container-tools {
-                height: 2rem;
-            }
-            .container-tools {
-                width: 20%;
-            }
-            .container-search {
-                width: 52%;
-                height: 52%;
-                display: flex;
-                justify-content: center;
-            }
-            .container-tools {
-                display: flex;
-                justify-content: space-between;
-                margin-right: 11px;
-                width: 19%;
-                height: 2.3rem;
-                .profile,
-                .track,
-                .container-cart {
-                    height: 100%;
-                }
-                .profile,
-                .track {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    width: 13%;
-                    a {
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        height: auto;
-                        width: 27px;
-                        svg {
-                            width: 100%;
-                            height: 100%;
-                            .st0 {
-                                fill: $primary;
-                            }
-                        }
-                    }
-                }
-                .track {
-                    a {
-                        width: 20px;
-                    }
-                }
-                .container-cart {
-                    width: 66%;
-                    display: flex;
-                    justify-content: center;
-                    .cart {
-                        height: 100%;
-                        width: 100%;
-                        background-color: $primary;
-                        border-radius: 4px;
-                        display: flex;
-                        cursor: pointer;
-                        justify-content: space-between;
-                        padding-right: 5px;
-                        &:hover {
-                            .icon-2 {
-                                svg {
-                                    transform: rotate(0deg);
-                                    transition: 0.3s;
-                                }
-                            }
-                        }
-                        .icon,
-                        h6,
-                        .icon-2 {
-                            height: 100%;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                        }
-                        .icon,
-                        h6 {
-                            width: 40%;
-                        }
-                        .icon {
-                            position: relative;
-                            width: 27%;
-                            padding-top: 3px;
-                            svg {
-                                height: auto;
-                                width: 19px;
-                                .st0 {
-                                    fill: $color-blanco;
-                                }
-                            }
-                            span {
-                                width: 14px;
-                                height: 14px;
-                                padding-right: 1px;
-                                padding-bottom: 1px;
-                                background-color: $secondary;
-                                position: absolute;
-                                top: 4px;
-                                right: 0px;
-                                border-radius: 50%;
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-
-                                color: $color-blanco;
-                                font-size: 0.7rem;
-                            }
-                        }
-                        h6 {
-                            color: $color-blanco;
-                            font-size: 0.9rem;
-                            margin-right: 3px;
-                            width: 56%;
-                        }
-                        .icon-2 {
-                            width: 12%;
-                            svg {
-                                height: auto;
-                                width: 12px;
-                                transform: rotate(180deg);
-                            }
-                        }
-                    }
-                }
-            }
         }
     }
 }
@@ -169,16 +46,11 @@ header {
 @media (max-width: 425px) {
     header {
         .container-header {
+            .container-social,
             .container-principal {
                 width: 100%;
             }
-            .container-principal {
-                .container-search {
-                    width: 32px;
-                    height: 32px;
-                    position: absolute;
-                    left: 16%;
-                }
+            .container-principal {     
                 .container-tools {
                     position: absolute;
                     right: 0;
@@ -210,9 +82,7 @@ header {
 @media (min-width: 320px) {
     header {
         .container-header {
-            .container-principal {
-                height: 59px;
-            }
+            .container-principal {}
         }
     }
 }

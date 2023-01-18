@@ -1,9 +1,9 @@
 // Importaciones
 import React from "react";
-import CartContainer from "../CartWidget/CartContainer";
+import CartContainer from "./Cart/CartContainer";
 import Menu from "./Menu/Menu";
-import Profile from "../../assets/svg/profile";
-import Track from "../../assets/svg/track";
+import Profile from "./Tools/Profile";
+import Track from "./Tools/Track";
 import SearchBar from "./SearchBar/SearchBar";
 import Logo from "./Logo/Logo";
 import SocialBar from "./SocialBar/SocialBar";
@@ -22,15 +22,11 @@ const Header = () => {
                 </div>
                 <div className="container-principal">
                     <Logo />
-                    <div className="container-search">
-                        <SearchBar />
-                    </div>
+                    <SearchBar />
                     <div className="container-tools">
                         <Profile />
                         <Track />
-                        <div className="container-cart">
-                            <CartContainer />
-                        </div>
+                        <CartContainer />
                     </div>
                 </div>
             </div>

@@ -3,7 +3,13 @@ import { createContext, useState } from 'react';
 export const CartContext = createContext([])
 // Creacion del provider
 export const CartContextProvider = ({ children }) => {
-  const [cartList, setCartList] = useState([])
+  const [cartList, setCartList] = useState([
+    {
+      id: '',
+      name: '',
+      cantidad: 1
+    }
+  ])
 
   function agregarAlCarrito(items) {
     const index = cartList.findIndex(i => i.id === items.id)

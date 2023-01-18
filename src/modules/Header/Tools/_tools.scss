@@ -1,0 +1,81 @@
+.container-tools {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 11px;
+    width: 20%;
+    height: 2.3rem;
+}
+.track {
+    height: 100%;
+}
+.profile {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (min-width: 426px) {
+    .track {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 13%;
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+            width: 27px;
+            svg {
+                width: 100%;
+                height: 100%;
+                .st0 {
+                    fill: $primary;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .track {
+        display: none;
+    }
+    .profile {
+        width: 30%;
+        position: absolute;
+        top: 0;
+        right: 67px;
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+            width: 100%;
+            svg {
+                width: 100%;
+                height: 100%;
+                .st0 {
+                    fill: $primary;
+                }
+            }
+        }
+    }
+    
+}
+
+@media (max-width: 375px) {
+    .profile {
+        right: 54px;
+    }
+}
+
+@media (max-width: 320px) {
+    .profile {
+        right: 42px;
+        width: 37%;
+    }
+    .container-cart {
+        right: 5px;
+    }
+}
