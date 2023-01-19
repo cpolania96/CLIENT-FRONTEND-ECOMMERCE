@@ -12,6 +12,10 @@
         }
     }
 }
+
+// MEDIAQUERIES
+
+// Desktop
 @media (max-width: 1440px) {
     .container-logo {
         width: 162px;
@@ -27,11 +31,15 @@
         width: 162px;
     }
 }
+
+// Tablet
 @media (max-width: 768px) {
     .container-logo {
         width: 152px;
     }
 }
+
+// Mobile
 @media (max-width: 425px) {
     .container-logo {
         width: 31%;
@@ -45,12 +53,12 @@
 @media (max-width: 375px) { 
     .container-logo {
         width: 36%;
-        left: 31%;
+        left: 33%;
     }
 }
 @media (max-width: 320px) { 
     .container-logo {
         width: 40%;
-        left: 30%;
+        left: 30.4%;
     }
 }

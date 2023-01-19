@@ -38,12 +38,12 @@
 @media (max-width: 375px) {
   .container-logo {
     width: 36%;
-    left: 31%; } }
+    left: 33%; } }
 
 @media (max-width: 320px) {
   .container-logo {
     width: 40%;
-    left: 30%; } }
+    left: 30.4%; } }
 
 .container-search {
   width: 52%;
@@ -115,7 +115,7 @@
 
 @media (max-width: 320px) {
   .container-search {
-    left: 44px; } }
+    left: 50px; } }
 
 .container-news {
   height: 28px;
@@ -126,23 +126,63 @@
     height: 100%;
     width: 80%; }
 
-menu {
-  width: 54rem;
-  height: 100%;
-  display: flex;
-  justify-content: space-between; }
-  menu a {
-    width: 10rem;
+@media (min-width: 426px) {
+  .container-menu {
+    height: 40px;
+    width: 100%;
+    background-color: #9E1460;
+    display: flex;
+    justify-content: center; }
+    .container-menu .menu-desktop {
+      width: 54rem;
+      height: 100%;
+      display: flex;
+      justify-content: space-between; }
+      .container-menu .menu-desktop a {
+        width: 10rem;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none; }
+        .container-menu .menu-desktop a h2 {
+          color: white;
+          margin: 0 !important; }
+        .container-menu .menu-desktop a:hover {
+          background-color: #ffffff21; }
+    .container-menu .btn-menu-mobile {
+      display: none; } }
+
+@media (max-width: 425px) {
+  .menu-container {
+    width: 18rem;
     height: 100%;
+    background-color: #9E1460; }
+  .container-menu {
+    position: absolute;
+    background-color: transparent;
+    width: 28px;
+    height: 20px;
+    top: 82px;
+    left: 25px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    text-decoration: none; }
-    menu a h2 {
-      color: white;
-      margin: 0 !important; }
-    menu a:hover {
-      background-color: #ffffff21; }
+    align-items: center; }
+    .container-menu .menu-desktop {
+      display: none; }
+    .container-menu button {
+      background-color: transparent;
+      border: none; }
+      .container-menu button svg .st0 {
+        fill: #9E1460; } }
+
+@media (max-width: 375px) {
+  .container-menu {
+    left: 25px; } }
+
+@media (max-width: 320px) {
+  .container-menu {
+    left: 19px; } }
 
 .container-social {
   height: 1.6rem;
@@ -422,12 +462,6 @@ header {
       justify-content: space-between;
       align-items: center; }
 
-.container-menu {
-  height: 40px;
-  background-color: #9E1460;
-  display: flex;
-  justify-content: center; }
-
 @media (max-width: 425px) {
   header .container-header .container-social,
   header .container-header .container-principal {
@@ -470,7 +504,8 @@ h2 {
       display: flex;
       flex-direction: row;
       width: 30%; }
-      .banner-icons ul li span, .banner-icons ul li div {
+      .banner-icons ul li span,
+      .banner-icons ul li div {
         height: 100%;
         display: flex;
         align-items: center; }
@@ -488,7 +523,7 @@ h2 {
         justify-content: center;
         align-items: flex-start; }
         .banner-icons ul li div h3 {
-          color: #3F3844;
+          color: #3f3844;
           height: 35%;
           margin: 0; }
           .banner-icons ul li div h3:first-child {
@@ -498,6 +533,43 @@ h2 {
           .banner-icons ul li div h3:last-child {
             font-size: 0.8rem;
             font-weight: 400; }
+
+@media (max-width: 425px) {
+  .banner-icons {
+    height: 64px;
+    margin-top: 10px; }
+    .banner-icons ul {
+      width: 90%;
+      padding: 0;
+      margin: 0; }
+      .banner-icons ul li {
+        flex-direction: column; }
+        .banner-icons ul li span {
+          height: 43%;
+          width: 100%; }
+          .banner-icons ul li span svg {
+            width: 20%; }
+        .banner-icons ul li div {
+          width: 100%;
+          height: 38%;
+          margin-top: 9px; }
+          .banner-icons ul li div h3 {
+            height: 100%;
+            width: 100%;
+            text-align: center; }
+            .banner-icons ul li div h3:first-child {
+              font-size: 0.7rem;
+              margin: 0; }
+            .banner-icons ul li div h3:last-child {
+              display: none; } }
+
+@media (max-width: 375px) {
+  .banner-icons ul li span svg {
+    width: 24%; } }
+
+@media (max-width: 320px) {
+  .banner-icons ul li span svg {
+    width: 27%; } }
 
 .carousel {
   width: 100%;
@@ -557,8 +629,7 @@ h2 {
 
 .container-content {
   width: 100%;
-  height: 98%;
-  background-color: #f8f8ff; }
+  height: 98%; }
   .container-content .banner-cards,
   .container-content .menu-mascotas,
   .container-content .banner {

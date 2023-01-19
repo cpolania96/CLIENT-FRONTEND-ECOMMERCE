@@ -30,9 +30,7 @@ const Header = () => {
                     </div>
                 </div>
             </div>
-            {/* <div className="container-menu">
-                <Menu />
-            </div> */}
+            <Menu />
         </header>
     )
 }

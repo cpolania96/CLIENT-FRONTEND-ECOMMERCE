@@ -1,22 +1,80 @@
 // Estilos del módulo de gestion del menu
-menu {
-    width: 54rem;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    a {
-        width: 10rem;
-        height: 100%;
+
+// MEDIAQUERIES
+
+// Desktop
+@media (min-width: 426px) {
+    .container-menu {
+        height: 40px;
+        width: 100%;
+        background-color: $primary;
         display: flex;
         justify-content: center;
-        align-items: center;
-        text-decoration: none;
-        h2 {
-            color: white;
-            margin: 0 !important;
+        .menu-desktop {
+            width: 54rem;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            a {
+                width: 10rem;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-decoration: none;
+                h2 {
+                    color: white;
+                    margin: 0 !important;
+                }
+                &:hover {
+                    background-color: #ffffff21;
+                }
+            }
         }
-        &:hover {
-            background-color: #ffffff21;
+        .btn-menu-mobile {
+            display: none;
         }
     }
 }
+// Mobile
+@media (max-width: 425px) {
+    .menu-container {
+        width: 18rem;
+        height: 100%;
+        background-color: $primary;
+    }
+    .container-menu {
+        position: absolute;
+        background-color: transparent;
+        width: 28px;
+        height: 20px;
+        top: 82px;
+        left: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .menu-desktop {
+            display: none;
+        }
+        button {
+            background-color: transparent;
+            border: none;
+            svg {
+                .st0 {
+                    fill: $primary;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 375px) {
+    .container-menu {
+        left: 25px;
+    }
+}
+@media (max-width: 320px) {
+    .container-menu {
+        left: 19px;
+    }
+}
+
