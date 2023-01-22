@@ -16,6 +16,7 @@ const CartContainer = () => {
             return <CartIco styles={globoStyle} />
         }
     }
+    let totalPrice = getTotal()
     return (
         <div className="container-cart">
             <div className="cart-desktop"
@@ -26,7 +27,7 @@ const CartContainer = () => {
                     {globoIsVisible()}
 
                 </div>
-                <h6>${' '}{getTotal().toLocaleString('de-DE')}</h6>
+                <h6>${' '}{totalPrice}</h6>
                 <div className="icon-2">
                     <ArrowIco />
                 </div>

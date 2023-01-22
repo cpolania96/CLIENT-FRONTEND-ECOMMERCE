@@ -42,6 +42,97 @@
         width: 18rem;
         height: 100%;
         background-color: $primary;
+        position: relative;
+        .menu-primary {
+            width: 90%;
+            margin-top: 53px;
+            li {
+                width: 100%;
+                height: 2rem;
+                display: flex;
+                align-items: center;
+                list-style: none;
+                a {
+                    color: white;
+                    text-decoration: none;
+                }
+                &:first-child {
+                    margin-bottom: 10px;
+                    height: 40px;
+                    display: flex;
+                    justify-content: flex-start;
+                    a {
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: $secondary;
+                        border-radius: 4px;
+                        h2 {
+                            height: 100%;
+                            text-align: center;
+                            margin: 0;
+                            margin-left: 4px;
+                            display: flex;
+                            align-items: center;
+                        }
+                    }
+                }
+            }
+        }
+        .menu-secondary {
+            position: absolute;
+            bottom: 36px;
+            left: 5%;
+            width: 90%;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            padding: 0;
+            margin: 0;
+            align-items: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.384);
+            li {
+                margin: 0;
+                width: 100%;
+                height: 40px;
+                list-style: none;
+                a {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    text-decoration: none;
+                    svg, h2 {
+                        height: 100%;
+                        color: white;
+                    }
+                    svg {
+                        width: 9%;
+                        margin: 0 9px;
+                    }
+                    h2 {
+                        display: flex;
+                        align-items: center;
+                        font-weight: 300;
+                    }
+                }
+                &:first-child {
+                    margin-top: 10px;
+                }
+            }
+        }
+        .btn-menu-close {
+            width: 26px;
+            height: 26px;
+            position: absolute;
+            right: 6px;
+            top: 6px;
+            border-radius: 50%;
+            border: none;
+            background-color: white;
+            color: $primary;
+        }
     }
     .container-menu {
         position: absolute;
@@ -77,4 +168,3 @@
         left: 19px;
     }
 }
-

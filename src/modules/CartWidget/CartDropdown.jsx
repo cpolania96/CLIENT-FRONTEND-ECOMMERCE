@@ -26,7 +26,7 @@ function ContainerCart() {
                             <div className="description">
                                 <div className="name">{prod.title}</div>
                                 <div className="descript"> {prod.weight}g</div>
-                                <div className="price">${prod.price.toLocaleString('de-DE')}</div>
+                                <div className="price">${prod.price}</div>
                             </div>
                             <button className='close' onClick={() => borrarItem(prod.id)}>X</button>
                             <span className='item-count'>{prod.cantidad}</span>

@@ -157,7 +157,84 @@
   .menu-container {
     width: 18rem;
     height: 100%;
-    background-color: #9E1460; }
+    background-color: #9E1460;
+    position: relative; }
+    .menu-container .menu-primary {
+      width: 90%;
+      margin-top: 53px; }
+      .menu-container .menu-primary li {
+        width: 100%;
+        height: 2rem;
+        display: flex;
+        align-items: center;
+        list-style: none; }
+        .menu-container .menu-primary li a {
+          color: white;
+          text-decoration: none; }
+        .menu-container .menu-primary li:first-child {
+          margin-bottom: 10px;
+          height: 40px;
+          display: flex;
+          justify-content: flex-start; }
+          .menu-container .menu-primary li:first-child a {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #EB3699;
+            border-radius: 4px; }
+            .menu-container .menu-primary li:first-child a h2 {
+              height: 100%;
+              text-align: center;
+              margin: 0;
+              margin-left: 4px;
+              display: flex;
+              align-items: center; }
+    .menu-container .menu-secondary {
+      position: absolute;
+      bottom: 36px;
+      left: 5%;
+      width: 90%;
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      padding: 0;
+      margin: 0;
+      align-items: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.384); }
+      .menu-container .menu-secondary li {
+        margin: 0;
+        width: 100%;
+        height: 40px;
+        list-style: none; }
+        .menu-container .menu-secondary li a {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          text-decoration: none; }
+          .menu-container .menu-secondary li a svg, .menu-container .menu-secondary li a h2 {
+            height: 100%;
+            color: white; }
+          .menu-container .menu-secondary li a svg {
+            width: 9%;
+            margin: 0 9px; }
+          .menu-container .menu-secondary li a h2 {
+            display: flex;
+            align-items: center;
+            font-weight: 300; }
+        .menu-container .menu-secondary li:first-child {
+          margin-top: 10px; }
+    .menu-container .btn-menu-close {
+      width: 26px;
+      height: 26px;
+      position: absolute;
+      right: 6px;
+      top: 6px;
+      border-radius: 50%;
+      border: none;
+      background-color: white;
+      color: #9E1460; }
   .container-menu {
     position: absolute;
     background-color: transparent;
@@ -225,7 +302,7 @@
 
 @media (max-width: 1366px) {
   .social {
-    width: 13%;
+    width: 18%;
     margin-right: 39px; }
     .social .label {
       width: 47%; }

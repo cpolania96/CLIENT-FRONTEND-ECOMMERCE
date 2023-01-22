@@ -4,6 +4,10 @@ import { Box } from "@mui/system";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import IconMenu from "../../../assets/svg/icon-menu";
+import StorefrontIcon from '@mui/icons-material/Storefront';
+import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';
+import PinDropIcon from '@mui/icons-material/PinDrop';
+
 // Módulo de gestión del menu de inicio
 const Menu = () => {
     // Lista del menu
@@ -12,7 +16,8 @@ const Menu = () => {
         {
             id: 'MENU_01',
             title: 'Tienda',
-            to: '/tienda'
+            to: '/tienda',
+            icon: <StorefrontIcon />
         },
         {
             id: 'MENU_02',
@@ -35,6 +40,21 @@ const Menu = () => {
             to: '/contacto'
         },
     ]
+
+    const menuSecond = [
+        {
+            id: 'MS_01',
+            title: 'Ingresar',
+            icon: <AssignmentIndIcon />,
+            to: 'auth'
+        },
+        {
+            id: 'MS_01',
+            title: 'Sigue tu pedido',
+            icon: <PinDropIcon />,
+            to: 'seguimiento'
+        }
+    ]
     // Return del componente
     return (
         <div className="container-menu">
@@ -47,10 +67,12 @@ const Menu = () => {
                     ))
                 }
             </menu>
+            {/* Menu mobile */}
             <>
                 <button
                     onClick={() => setOpen(true)}
-                    className="btn-menu-mobile">
+                    className="btn-menu-mobile"
+                >
                     <IconMenu />
                 </button>
                 <SwipeableDrawer
@@ -62,15 +84,39 @@ const Menu = () => {
                     }}
                 >
                     <div className="menu-container">
-                        {menuItems.map(item => (
-                            <Link
-                                to={item.to}
-                                key={item.id}
-                                onClick={() => setOpen(false)}>
-                                {item.title}
-                            </Link>
-                        ))}
-
+                        <ul className="menu-primary">
+                            {menuItems.map(item => (
+                                <li>
+                                    <Link
+                                        to={item.to}
+                                        key={item.id}
+                                        onClick={() => setOpen(false)}
+                                    >
+                                        {item.icon}
+                                        <h2>
+                                            {item.title}
+                                        </h2>
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                        <ul className="menu-secondary">
+                            {menuSecond.map(item => (
+                                <li key={item.id}>
+                                    <Link
+                                        to={item.to}
+                                        onClick={() => setOpen(false)}>
+                                        {item.icon}
+                                        <h2>{item.title}</h2>
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                        <button
+                            className="btn-menu-close"
+                            onClick={() => setOpen(false)}>
+                            X
+                        </button>
                     </div>
                 </SwipeableDrawer>
             </>
