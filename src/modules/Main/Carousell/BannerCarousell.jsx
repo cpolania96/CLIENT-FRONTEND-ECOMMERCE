@@ -56,38 +56,35 @@ class BannerCarousell extends Component {
   render() {
     const { activeIndex } = this.state;
 
-    const slides = () => {
-      const viewWidth = window.innerWidth
-      if(viewWidth < 425) {
-        return 
-      }else {
-        return items.map((item) => {
-          return (
-            <CarouselItem
-              onExiting={this.onExiting}
-              onExited={this.onExited}
-              key={item.src}
-            >
-              <Link to={item.link}>
-                <img src={item.src} alt={item.altText} />
-              </Link>
-            </CarouselItem>
-          );
-        })
-      }
-    }
-  
+    const slides = items.map((item) => {
+      return (
+        <CarouselItem
+          onExiting={this.onExiting}
+          onExited={this.onExited}
+          key={item.src}
+        >
+          <Link to={item.link}>
+            <img src={item.src} alt={item.altText} />
+          </Link>
+        </CarouselItem>
+      )
+    })
+
+
+
     return (
-      <Carousel
-        activeIndex={activeIndex}
-        next={this.next}
-        previous={this.previous}
-      >
-        <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
-        {slides()}
-        <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
-        <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
-      </Carousel>
+      <div className="carousel">
+        <Carousel
+          activeIndex={activeIndex}
+          next={this.next}
+          previous={this.previous}
+        >
+          <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
+          {slides}
+          <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
+          <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
+        </Carousel>
+      </div>
     );
   }
 }

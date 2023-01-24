@@ -20,7 +20,7 @@
             button {
                 border-top: 1px solid $primary;
                 border-bottom: 1px solid $primary;
-                background-color: $color-blanco;
+                background-color: white;
             }
             input {
                 width: 89%;
@@ -42,7 +42,7 @@
                 justify-content: center;
                 align-items: center;
                 svg {
-                    width: 1.4rem;
+                    width: 44%;
                     height: auto;
                     .st0 {
                         fill: $primary;

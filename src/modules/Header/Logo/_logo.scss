@@ -36,6 +36,11 @@
 @media (max-width: 768px) {
     .container-logo {
         width: 152px;
+        a {
+            position: absolute;
+            left: -11px;
+            top: -16px;
+        }
     }
 }
 
@@ -50,13 +55,13 @@
         }
     }
 }
-@media (max-width: 375px) { 
+@media (max-width: 375px) {
     .container-logo {
         width: 36%;
-        left: 33%;
+        left: 33.4%;
     }
 }
-@media (max-width: 320px) { 
+@media (max-width: 320px) {
     .container-logo {
         width: 40%;
         left: 30.4%;

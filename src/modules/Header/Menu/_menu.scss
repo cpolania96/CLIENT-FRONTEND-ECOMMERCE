@@ -26,13 +26,38 @@
                     color: white;
                     margin: 0 !important;
                 }
-                &:hover {
-                    background-color: #ffffff21;
-                }
             }
         }
         .btn-menu-mobile {
             display: none;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .container-menu {
+        .menu-desktop {
+            width: 84%;
+            a {
+                h2 {
+                    font-size: 0.9rem !important;
+                }
+                &:active {
+                    background-color: #ffffff21;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 1024px) {
+    .container-menu {
+        .menu-desktop {
+            a {
+                h2 {
+                }
+                &:hover {
+                    background-color: #ffffff21;
+                }
+            }
         }
     }
 }
@@ -103,7 +128,8 @@
                     height: 100%;
                     display: flex;
                     text-decoration: none;
-                    svg, h2 {
+                    svg,
+                    h2 {
                         height: 100%;
                         color: white;
                     }
@@ -158,6 +184,7 @@
         }
     }
 }
+
 @media (max-width: 375px) {
     .container-menu {
         left: 25px;

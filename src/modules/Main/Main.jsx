@@ -8,7 +8,7 @@ function Main() {
     return (
         <div className="container-content">
             <BannerIcons />
-            {/* <BannerCarousell /> */}
+            <BannerCarousell />
             {/* <ContainerBanner TITLE={TITLE2} /> */}
         </div>
     )

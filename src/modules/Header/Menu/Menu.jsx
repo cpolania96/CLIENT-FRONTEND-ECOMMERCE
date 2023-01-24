@@ -7,6 +7,7 @@ import IconMenu from "../../../assets/svg/icon-menu";
 import StorefrontIcon from '@mui/icons-material/Storefront';
 import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';
 import PinDropIcon from '@mui/icons-material/PinDrop';
+import CloseIcon from '@mui/icons-material/Close';
 
 // Módulo de gestión del menu de inicio
 const Menu = () => {
@@ -79,9 +80,6 @@ const Menu = () => {
                     open={open}
                     onOpen={() => setOpen(true)}
                     onClose={() => setOpen(false)}
-                    ModalProps={{
-                        keepMounted: false
-                    }}
                 >
                     <div className="menu-container">
                         <ul className="menu-primary">
@@ -115,7 +113,7 @@ const Menu = () => {
                         <button
                             className="btn-menu-close"
                             onClick={() => setOpen(false)}>
-                            X
+                            <CloseIcon />
                         </button>
                     </div>
                 </SwipeableDrawer>
