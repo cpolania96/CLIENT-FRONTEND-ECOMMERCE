@@ -1,14 +1,14 @@
 import React from 'react'
 import ContainerBanner from './ContainerBanner'
 import BannerIcons from './BannerIcons/BannerIcons'
-import BannerCarousell from './Carousell/BannerCarousell'
+import BannerCarousel from './Carousel/BannerCarousell'
 
 function Main() {
     const TITLE2 = "Los más vendidos..."
     return (
         <div className="container-content">
             <BannerIcons />
-            <BannerCarousell />
+            <BannerCarousel />
             {/* <ContainerBanner TITLE={TITLE2} /> */}
         </div>
     )

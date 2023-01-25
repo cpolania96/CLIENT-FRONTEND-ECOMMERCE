@@ -844,11 +844,17 @@ h2 {
   .carousel {
     height: 100%; } }
 
-@media (min-width: 424px) {
-  .carousel {
-    height: 270px; } }
+@media (max-width: 425px) {
+  .carousel-container-desktop {
+    display: none; }
+  .carousel-container-mobile {
+    margin: 18px 0 0 0; } }
 
-@media (min-width: 768px) {
+@media (min-width: 426px) {
+  .carousel-container-mobile {
+    display: none; } }
+
+@media (min-width: 769px) {
   .carousel {
     height: 18rem; } }
 
