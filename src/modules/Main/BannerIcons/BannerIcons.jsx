@@ -11,8 +11,8 @@ function BannerIcons() {
         {
             id: 'BI-01',
             icon: <IconDelivery />,
-            title: 'Envíos rápidos y seguros',
-            subtitle: 'Recibe en menos de 24 horas'
+            title: 'Envíos rápidos',
+            subtitle: 'Recibe en 24 horas'
         },
         {
             id: 'BI-02',

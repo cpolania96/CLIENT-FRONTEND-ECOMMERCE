@@ -767,6 +767,12 @@ h2 {
             font-size: 0.8rem;
             font-weight: 400; }
 
+@media (max-width: 768px) {
+  .banner-icons ul {
+    width: 87%; }
+    .banner-icons ul li {
+      width: 34%; } }
+
 @media (max-width: 425px) {
   .banner-icons {
     height: 64px;
@@ -804,41 +810,32 @@ h2 {
   .banner-icons ul li span svg {
     width: 27%; } }
 
-.carousel {
-  width: 100%;
-  margin: 5px auto;
-  border-radius: 0px;
-  overflow: hidden; }
-  .carousel .carousel-inner {
-    height: 100%;
-    width: 100%; }
-    .carousel .carousel-inner .carousel-item {
-      height: 100%; }
-      .carousel .carousel-inner .carousel-item img {
-        height: 100%; }
-  .carousel .carousel-control-prev .carousel-control-prev-icon,
-  .carousel .carousel-control-prev .carousel-control-next-icon,
-  .carousel .carousel-control-next .carousel-control-prev-icon,
-  .carousel .carousel-control-next .carousel-control-next-icon {
-    height: 50%;
-    background-image: url("https://res.cloudinary.com/devsy44f3/image/upload/v1673804040/Icons/flecha_p4rfen.svg");
-    background-size: 40px; }
-  .carousel .carousel-control-prev .carousel-control-prev-icon,
-  .carousel .carousel-control-next .carousel-control-prev-icon {
-    transform: rotate(180deg); }
-  .carousel .carousel-control-prev:hover,
-  .carousel .carousel-control-next:hover {
-    background-color: rgba(0, 0, 0, 0.079); }
-  .carousel .carousel-indicators {
-    align-items: center; }
-    .carousel .carousel-indicators button {
-      border-radius: 50%;
-      height: 18px;
-      width: 18px;
-      background-color: #9E1460;
-      border: none; }
-    .carousel .carousel-indicators .active {
-      border: 1px solid white; }
+.carousel .carousel-control-prev .carousel-control-prev-icon,
+.carousel .carousel-control-prev .carousel-control-next-icon,
+.carousel .carousel-control-next .carousel-control-prev-icon,
+.carousel .carousel-control-next .carousel-control-next-icon {
+  height: 50%;
+  background-image: url("https://res.cloudinary.com/devsy44f3/image/upload/v1673804040/Icons/flecha_p4rfen.svg");
+  background-size: 40px; }
+
+.carousel .carousel-control-prev .carousel-control-prev-icon,
+.carousel .carousel-control-next .carousel-control-prev-icon {
+  transform: rotate(180deg); }
+
+.carousel .carousel-control-prev:hover,
+.carousel .carousel-control-next:hover {
+  background-color: rgba(0, 0, 0, 0.079); }
+
+.carousel .carousel-indicators {
+  align-items: center; }
+  .carousel .carousel-indicators button {
+    border-radius: 50%;
+    height: 18px;
+    width: 18px;
+    background-color: #9E1460;
+    border: none; }
+  .carousel .carousel-indicators .active {
+    border: 1px solid white; }
 
 @media (min-width: 375px) {
   .carousel {
@@ -848,9 +845,31 @@ h2 {
   .carousel-container-desktop {
     display: none; }
   .carousel-container-mobile {
-    margin: 18px 0 0 0; } }
+    width: 100%;
+    margin: 18px auto;
+    border-radius: 0px;
+    overflow: hidden; }
+    .carousel-container-mobile .carousel-inner {
+      height: 100%;
+      width: 100%; }
+      .carousel-container-mobile .carousel-inner .carousel-item {
+        height: 100%; }
+        .carousel-container-mobile .carousel-inner .carousel-item img {
+          width: 100%; } }
 
 @media (min-width: 426px) {
+  .carousel-container-desktop .carousel {
+    width: 100%;
+    margin: 5px auto;
+    border-radius: 0px;
+    overflow: hidden; }
+    .carousel-container-desktop .carousel .carousel-inner {
+      height: 100%;
+      width: 100%; }
+      .carousel-container-desktop .carousel .carousel-inner .carousel-item {
+        height: 100%; }
+        .carousel-container-desktop .carousel .carousel-inner .carousel-item img {
+          width: 100%; }
   .carousel-container-mobile {
     display: none; } }
 

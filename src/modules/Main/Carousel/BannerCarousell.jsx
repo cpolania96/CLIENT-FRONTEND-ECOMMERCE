@@ -26,6 +26,7 @@ function BannerCarousel() {
   return (
     <>
       <div className="carousel-container-desktop">
+        <CarouselComponent items={itemsDesktop}/>
       </div>
       <div className="carousel-container-mobile">
         <CarouselComponent items={itemsMobile}/>

@@ -58,7 +58,15 @@
 // MEDIAQUERIES
 
 // Mobile
-@media (max-width: 425px) {
+@media (max-width: 768px) {
+    .banner-icons {
+        ul {
+            width: 87%;
+            li {
+                width: 34%;
+            }
+        }
+    }
 }
 
 @media (max-width: 425px) {

@@ -30,6 +30,8 @@ header {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            // border-top: 1px solid $secondary;
+            // border-bottom: 1px solid $secondary;
         }
     }
 }
@@ -43,7 +45,7 @@ header {
             .container-principal {
                 width: 100%;
             }
-            .container-principal {     
+            .container-principal {
                 .container-tools {
                     position: absolute;
                     right: 0;
@@ -75,7 +77,8 @@ header {
 @media (min-width: 320px) {
     header {
         .container-header {
-            .container-principal {}
+            .container-principal {
+            }
         }
     }
 }
