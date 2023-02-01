@@ -61,6 +61,13 @@
         }
     }
 }
+@media (min-width: 426px) {
+    .container-menu {
+        .PrivateSwipeArea-root {
+            display: none;
+        }
+    }
+}
 // Mobile
 @media (max-width: 425px) {
     .menu-container {

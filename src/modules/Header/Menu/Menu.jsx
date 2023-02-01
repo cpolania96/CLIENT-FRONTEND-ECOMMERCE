@@ -77,6 +77,7 @@ const Menu = () => {
                     <IconMenu />
                 </button>
                 <SwipeableDrawer
+                    className="menu-mobile-swip"
                     open={open}
                     onOpen={() => setOpen(true)}
                     onClose={() => setOpen(false)}

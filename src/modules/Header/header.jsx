@@ -1,13 +1,11 @@
 // Importaciones
 import React from "react";
-import CartContainer from "./Cart/CartContainer";
 import Menu from "./Menu/Menu";
-import Profile from "./Tools/Profile";
-import Track from "./Tools/Track";
 import SearchBar from "./SearchBar/SearchBar";
 import Logo from "./Logo/Logo";
 import SocialBar from "./SocialBar/SocialBar";
 import NewsBar from "./NewsBar/NewsBar";
+import ContainerTools from "./Tools/ContainerTools";
 
 // Modulo contenedor de header
 const Header = () => {
@@ -23,11 +21,7 @@ const Header = () => {
                 <div className="container-principal">
                     <Logo />
                     <SearchBar />
-                    <div className="container-tools">
-                        <Profile />
-                        <Track />
-                        <CartContainer />
-                    </div>
+                    <ContainerTools />
                 </div>
             </div>
             <Menu />

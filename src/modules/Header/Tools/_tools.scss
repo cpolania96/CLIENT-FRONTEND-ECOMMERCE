@@ -2,80 +2,97 @@
     display: flex;
     justify-content: space-between;
     margin-right: 11px;
-    width: 20%;
     height: 2.3rem;
 }
 .track {
     height: 100%;
 }
-.profile {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 @media (min-width: 426px) {
-    .track {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 13%;
-        a {
+    .container-tools {
+        .track,
+        .profile {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: auto;
-            width: 27px;
-            svg {
-                width: 100%;
-                height: 100%;
-                .st0 {
-                    fill: $primary;
+            margin-left: 10px;
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: auto;
+                width: 27px;
+                svg {
+                    width: 100%;
+                    height: 100%;
+                    .st0 {
+                        fill: $primary;
+                    }
                 }
             }
+            .profile {
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        .track {
+            width: 19px;
+        }
+        .profile {
+            position: relative;
+            width: 26px;
         }
     }
 }
 
+// Mobile
 @media (max-width: 425px) {
-    .track {
-        display: none;
-    }
-    .profile {
-        width: 30%;
-        position: absolute;
-        top: 0;
-        right: 67px;
-        a {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: auto;
-            width: 100%;
-            svg {
+    .container-tools {
+        width: 20%;
+        .track {
+            display: none;
+        }
+        .profile {
+            right: 60px;
+            width: 32%;
+            position: absolute;
+            top: 8px;
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: auto;
                 width: 100%;
-                height: 100%;
-                .st0 {
-                    fill: $primary;
+                svg {
+                    width: 100%;
+                    height: 100%;
+                    .st0 {
+                        fill: $primary;
+                    }
                 }
             }
         }
     }
-    
 }
 
 @media (max-width: 375px) {
-    .profile {
-        right: 54px;
+    .container-tools {
+        .profile {
+            right: 47px;
+            width: 36%;
+            top: 9px;
+        }
     }
 }
 
 @media (max-width: 320px) {
-    .profile {
-        right: 42px;
-        width: 37%;
-    }
-    .container-cart {
-        right: 5px;
+    .container-tools {
+        .profile {
+            right: 40px;
+            top: 7px;
+            width: 39%;
+        }
     }
 }

@@ -35,11 +35,12 @@
 // Tablet
 @media (max-width: 768px) {
     .container-logo {
-        width: 152px;
+        width: 108px;
         a {
             position: absolute;
-            left: -11px;
-            top: -16px;
+            left: -19px;
+            top: -14px;
+            width: 127px;
         }
     }
 }
@@ -49,7 +50,7 @@
     .container-logo {
         width: 31%;
         position: absolute;
-        left: 34%;
+        left: 35%;
         a {
             position: initial;
         }
