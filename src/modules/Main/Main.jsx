@@ -3,12 +3,14 @@ import ContainerBanner from './ContainerBanner'
 import BannerIcons from './BannerIcons/BannerIcons'
 import BannerCarousel from './Carousel/BannerCarousell'
 
-function Main() {
-    const TITLE2 = "Los más vendidos..."
+function Main() {7
+    // Mensaje de bienvenida
+    const msgWelcome = 'Bienvenida a tu tienda favorita de productos para el cuidado de tus uñas'
     return (
         <div className="container-content">
             <BannerIcons />
             <BannerCarousel />
+            <h2 className='msg-welcome'>{msgWelcome}</h2>
             {/* <ContainerBanner TITLE={TITLE2} /> */}
         </div>
     )

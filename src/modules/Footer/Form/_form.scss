@@ -1,0 +1,100 @@
+// Estilos para el form del footer
+.form-footer {
+    form {
+        ul {
+            padding: 0;
+            .terms {
+                border: none;
+                width: 100%;
+                margin: 0 auto;
+                position: relative;
+                input[type="checkbox"] {
+                    position: absolute;
+                    width: 16px;
+                    top: 0;
+                    left: 0;
+                    height: auto;
+                }
+                h3 {
+                    font-size: 0.7rem;
+                    color: white;
+                    margin: 0;
+                    margin-left: 21px;
+                    width: 91%;
+                    a {
+                        font-size: 0.7rem;
+                        color: white;
+                        margin-left: 4px;
+                    }
+                }
+            }
+            li {
+                list-style: none;
+                display: flex;
+                border: none;
+                justify-content: space-between;
+                border-bottom: 1px solid white;
+                margin-bottom: 13px;
+                &:first-child,
+                &:last-child {
+                    border: none;
+                    margin: 0;
+                }
+                &:last-child {
+                    margin-top: 10px;
+                }
+                h2 {
+                    text-align: center;
+                }
+                h2,
+                label,
+                input {
+                    color: white;
+                }
+                label,
+                input {
+                    height: 100%;
+                }
+                label {
+                    font-size: 0.85rem;
+                }
+                input {
+                    width: 76%;
+                    background-color: transparent;
+                    border: none;
+                    outline: none;
+                }
+                input[type="submit"] {
+                    background-color: white;
+                    margin: 5px auto;
+                    height: 35px;
+                    color: $primary;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
+
+// MEDIAQUERIES
+
+// Mobile
+@media (max-width: 425px) {
+    .form-footer {
+        width: 78%;
+        margin: 0 auto;
+        form {
+            ul {
+                li {
+                    h2 {
+                        font-size: 1.05rem !important;
+                    }
+                    // label {
+                    // }
+                    // input {
+                    // }
+                }
+            }
+        }
+    }
+}
