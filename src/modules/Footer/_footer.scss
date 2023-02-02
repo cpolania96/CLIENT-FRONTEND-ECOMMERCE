@@ -1,11 +1,31 @@
 // Imports
 @import './Form/form';
+@import './Menu/menu-footer';
 
 // Estilos para Footer
 .footer {
     width: 100%;
     background-color: $primary;
     padding: 24px 0;
+    .logo-footer {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+        flex-direction: column;
+        img {
+            width: 44%;
+        }
+        h3 {
+            width: 44%;
+            color: white;
+            font-size: 0.9rem;
+            text-align: center;
+            margin-top: 5px;
+            font-weight: lighter;
+        }
+    }
 }
 
 // Desktop

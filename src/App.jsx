@@ -9,23 +9,26 @@ import { CartContextProvider } from './Context/cartContext';
 import ContainerCategory from './modules/ItemListContainer/ContainerCategory';
 import Checkout from './modules/CartWidget/Checkout'
 import Cart from './modules/CartWidget/cart';
+import { AppContextProvider } from './Context/appContext';
 
 // Módulo principal de app
 const App = () => {
     return (
-        <CartContextProvider >
-            <BrowserRouter >
-                <Header />
-                <Routes >
-                    <Route exact path="/" element={<Main />} />
-                    <Route exact path='/detalle/:detailId' element={<ItemDetailContainer />} />
-                    <Route exact path='/categoria/:categoryId' element={<ContainerCategory />} />
-                    <Route exact path='/cart' element={<Cart />} />
-                    <Route exact path='/cart/checkout' element={<Checkout />} />
-                </Routes>
-                <Footer />
-            </BrowserRouter>
-        </CartContextProvider>
+        <AppContextProvider>
+            <CartContextProvider >
+                <BrowserRouter >
+                    <Header />
+                    <Routes >
+                        <Route exact path="/" element={<Main />} />
+                        <Route exact path='/detalle/:detailId' element={<ItemDetailContainer />} />
+                        <Route exact path='/categoria/:categoryId' element={<ContainerCategory />} />
+                        <Route exact path='/cart' element={<Cart />} />
+                        <Route exact path='/cart/checkout' element={<Checkout />} />
+                    </Routes>
+                    <Footer />
+                </BrowserRouter>
+            </CartContextProvider>
+        </AppContextProvider>
 
     )
 }

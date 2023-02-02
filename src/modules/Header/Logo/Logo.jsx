@@ -1,21 +1,19 @@
 // Importaciones
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
+import { AppContext } from '../../../Context/appContext'
 
 // Módulo contenedor del logo
 function Logo() {
     // Carga de recursos
-    const sources = {
-        logo: {
-            link: "https://res.cloudinary.com/devsy44f3/image/upload/v1673167522/Magibell/Identidad%20Corporativa/logo-magibell_qdtytw.svg",
-            alt: ""
-        }
-    }
-    // Exportación del módulo
+    const { logo } = useContext(AppContext)
+    const { link, alt } = logo.header || {}
+
+    // Return del módulo
     return (
         <div className="container-logo">
             <Link to="/">
-                <img src={sources.logo.link} alt={sources.logo.alt} />
+                <img src={link} alt={alt} />
             </Link>
         </div>
     )

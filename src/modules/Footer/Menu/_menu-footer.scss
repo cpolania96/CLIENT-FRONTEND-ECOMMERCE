@@ -1,0 +1,26 @@
+// Estilos para el menu del footer
+
+.menu-footer {
+    width: 80%;
+    margin: 0 auto;
+    h2 {
+        font-size: 1.05rem;
+        color: white;
+        font-weight: 500;
+    }
+    ul {
+        padding: 0 23px;
+        margin-top: 18px;
+        li {
+            list-style: none;
+            a {
+                text-decoration: none;
+                h3 {
+                    color: white;
+                    font-size: 0.9rem;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}

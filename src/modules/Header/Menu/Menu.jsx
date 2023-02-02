@@ -4,43 +4,17 @@ import { Box } from "@mui/system";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import IconMenu from "../../../assets/svg/icon-menu";
-import StorefrontIcon from '@mui/icons-material/Storefront';
 import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';
 import PinDropIcon from '@mui/icons-material/PinDrop';
 import CloseIcon from '@mui/icons-material/Close';
+import { useContext } from "react";
+import { AppContext } from "../../../Context/appContext";
 
 // Módulo de gestión del menu de inicio
 const Menu = () => {
     // Lista del menu
     const [open, setOpen] = useState(false)
-    const menuItems = [
-        {
-            id: 'MENU_01',
-            title: 'Tienda',
-            to: '/tienda',
-            icon: <StorefrontIcon />
-        },
-        {
-            id: 'MENU_02',
-            title: 'Ofertas',
-            to: '/ofertas'
-        },
-        {
-            id: 'MENU_03',
-            title: 'Blog',
-            to: '/blog'
-        },
-        {
-            id: 'MENU_04',
-            title: 'Conócenos',
-            to: '/conocenos'
-        },
-        {
-            id: 'MENU_05',
-            title: 'Contacto',
-            to: '/contacto'
-        },
-    ]
+    const { menu } = useContext(AppContext)
 
     const menuSecond = [
         {
@@ -56,12 +30,13 @@ const Menu = () => {
             to: 'seguimiento'
         }
     ]
+
     // Return del componente
     return (
         <div className="container-menu">
             <menu className="menu-desktop">
                 {
-                    menuItems.map(item => (
+                    menu.map(item => (
                         <Link to={item.to} key={item.id}>
                             <h2>{item.title}</h2>
                         </Link>
@@ -84,7 +59,7 @@ const Menu = () => {
                 >
                     <div className="menu-container">
                         <ul className="menu-primary">
-                            {menuItems.map(item => (
+                            {menu.map(item => (
                                 <li>
                                     <Link
                                         to={item.to}
