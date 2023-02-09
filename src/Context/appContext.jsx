@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { createContext } from "react";
 import StorefrontIcon from '@mui/icons-material/Storefront';
+import axios from "axios";
 
 // Export del App Context
 export const AppContext = createContext()
@@ -9,7 +10,9 @@ export const AppContext = createContext()
 // Export Provider del AppContext
 export const AppContextProvider = ({ children }) => {
 
-    // Funcion para setear estado
+    // Config General
+    // const { URL_CONNECT_SERVER } = process.env
+    // console.log(URL_CONNECT_SERVER)
 
     // Proveedor del logo
     const [logo, setLogo] = useState({})
@@ -60,12 +63,30 @@ export const AppContextProvider = ({ children }) => {
     const setMenuState = (prop) => setMenu(prop)
     useEffect(() => setMenuState(menuList), [])
 
+    // Proveedor de carousel carousel
+    const [carouselData, setCarouselData] = useState({
+        ok: false,
+        src: []
+    })
+    const setCarouselDataService = () => {
+        const link = 'http://localhost:4000/api/ecommerce/carousel/get-sources'
+        axios
+            .get(link)
+            .then(data => setCarouselData({
+                ok: data.data.ok,
+                src: data.data.src
+            }))
+           .catch(err => console.log(err))
+    }
+    useEffect(() => { setCarouselDataService() }, [])
+
     // Return del componente
     return (
         <AppContext.Provider
             value={{
                 menu,
-                logo
+                logo,
+                carouselData
             }}>
             {children}
         </AppContext.Provider>

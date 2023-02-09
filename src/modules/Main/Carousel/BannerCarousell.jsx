@@ -1,39 +1,54 @@
-import React from 'react'
+import React, { useContext, useEffect, useState } from 'react'
+import { AppContext } from '../../../Context/appContext';
 import CarouselComponent from './Carousel/Carousel'
 
 function BannerCarousel() {
-  const itemsDesktop = [
-    {
-      src: 'https://res.cloudinary.com/devsy44f3/image/upload/v1673583692/Magibell/Recursos/Inicio-Carousell/banner_4_etcskp.png',
-      link: 'https://google.com/'
-    },
-    {
-      src: 'https://res.cloudinary.com/devsy44f3/image/upload/v1673583484/Magibell/Recursos/Inicio-Carousell/banner_3_hj70xk.png',
-      link: ''
-    }
-  ];
-  const itemsMobile = [
-    {
-      src: 'https://res.cloudinary.com/devsy44f3/image/upload/v1674538828/Magibell/Recursos/Inicio-Carousell/Mobile/3_yj8xlf.png',
-      link: ''
-    },
-    {
-      src: 'https://res.cloudinary.com/devsy44f3/image/upload/v1674538633/Magibell/Recursos/Inicio-Carousell/Mobile/Mesa_de_trabajo_4_ftlf5o.png',
-      link: ''
-    }
-  ]
+  // Import del context
+  const { carouselData } = useContext(AppContext)
+  
+  // Estado donde se almacena la data
+  const [sources, setSources] = useState({
+    ok: false,
+    mobile: [],
+    desktop: []
+  })
 
-  return (
-    <>
-      <div className="carousel-container-desktop">
-        <CarouselComponent items={itemsDesktop}/>
-      </div>
-      <div className="carousel-container-mobile">
-        <CarouselComponent items={itemsMobile}/>
-      </div>
-    </>
-
-  )
+  // Filtro de sources para mediaqueries
+  const filterData = () => {
+    if (carouselData.ok) {
+      let mobileData = carouselData.src.filter(item => item.display === 'Mobile')
+      let desktopData = carouselData.src.filter(item => item.display === 'Desktop')
+      setSources({
+        ok: true,
+        mobile: mobileData,
+        desktop: desktopData
+      })
+    } else
+      setSources({
+        ok: false,
+        mobile: [],
+        desktop: []
+      })
+  }
+  useEffect(() => { filterData() }, [carouselData])
+ 
+  // Renderizado del carousel
+  const renderCarousel = () => {
+    if (sources.ok) {
+      return (
+        <>
+          <div className="carousel-container-desktop">
+            <CarouselComponent items={sources.desktop} />
+          </div>
+          <div className="carousel-container-mobile">
+            <CarouselComponent items={sources.mobile} />
+          </div>
+        </>
+      )
+    }
+  }
+  // Return del componente
+  return renderCarousel()
 }
 
 export default BannerCarousel

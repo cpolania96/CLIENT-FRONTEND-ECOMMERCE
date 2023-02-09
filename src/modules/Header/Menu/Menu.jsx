@@ -24,7 +24,7 @@ const Menu = () => {
             to: 'auth'
         },
         {
-            id: 'MS_01',
+            id: 'MS_02',
             title: 'Sigue tu pedido',
             icon: <PinDropIcon />,
             to: 'seguimiento'
@@ -60,10 +60,10 @@ const Menu = () => {
                     <div className="menu-container">
                         <ul className="menu-primary">
                             {menu.map(item => (
-                                <li>
+                                <li
+                                    key={item.id}>
                                     <Link
                                         to={item.to}
-                                        key={item.id}
                                         onClick={() => setOpen(false)}
                                     >
                                         {item.icon}

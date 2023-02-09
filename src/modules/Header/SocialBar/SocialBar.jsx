@@ -12,12 +12,12 @@ const SocialBar = () => {
             link: ''
         },
         {
-            id: "SB_01",
+            id: "SB_02",
             icon: <InstagramIco />,
             link: ''
         },
         {
-            id: "SB_01",
+            id: "SB_03",
             icon: <FacebookIco />,
             link: ''
         }
@@ -30,7 +30,7 @@ const SocialBar = () => {
                 socialBar.map(item => (
                     <Link
                         className="icon"
-                        key={item.key}
+                        key={item.id}
                         to={item.link}
                     >
                         {item.icon}
