@@ -862,9 +862,8 @@ h2 {
   .carousel .carousel-indicators .active {
     border: 1px solid white; }
 
-@media (min-width: 375px) {
-  .carousel {
-    height: 100%; } }
+.btn-link-carousel a .st0 {
+  fill: white; }
 
 @media (max-width: 425px) {
   .carousel-container-desktop {
@@ -873,14 +872,43 @@ h2 {
     width: 100%;
     margin: 18px auto;
     border-radius: 0px;
-    overflow: hidden; }
+    overflow: hidden;
+    position: relative; }
     .carousel-container-mobile .carousel-inner {
       height: 100%;
       width: 100%; }
       .carousel-container-mobile .carousel-inner .carousel-item {
         height: 100%; }
         .carousel-container-mobile .carousel-inner .carousel-item img {
-          width: 100%; } }
+          width: 100%; }
+  .btn-link-carousel {
+    width: 95%;
+    height: 51px;
+    background-color: #9E1460;
+    position: absolute;
+    bottom: -145px;
+    left: 2.7%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px; }
+    .btn-link-carousel a {
+      line-height: 20px;
+      text-align: center;
+      text-decoration: none;
+      color: white; }
+      .btn-link-carousel a:hover {
+        color: white; } }
+
+@media (max-width: 375px) {
+  .carousel {
+    height: 100%; }
+  .btn-link-carousel {
+    bottom: -97px; } }
+
+@media (max-width: 320px) {
+  .btn-link-carousel {
+    bottom: -45px; } }
 
 @media (min-width: 426px) {
   .carousel-container-desktop .carousel {
@@ -915,10 +943,10 @@ h2 {
   .container-content .msg-welcome {
     width: 100%;
     color: #660D6E;
-    padding: 0 62px;
+    padding: 0 44px;
     font-size: 1.2rem !important;
     text-align: center;
-    margin: 27px 0; }
+    margin: 80px 0 20px 0; }
 
 main .container-detail {
   width: 76%;

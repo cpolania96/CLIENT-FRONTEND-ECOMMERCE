@@ -1,3 +1,4 @@
+// Estilos del módulo de carousel
 .carousel {
   .carousel-control-prev,
   .carousel-control-next {
@@ -28,15 +29,18 @@
     }
   }
 }
-@media (min-width: 320px) {
-}
-@media (min-width: 375px) {
-  .carousel {
-    height: 100%;
+
+.btn-link-carousel {
+  a {
+    .st0 {
+      fill: white;
+    }
   }
 }
+// MEDIAQUERIES
 
 // Mobile
+
 @media (max-width: 425px) {
   .carousel-container-desktop {
     display: none;
@@ -46,6 +50,7 @@
     margin: 18px auto;
     border-radius: 0px;
     overflow: hidden;
+    position: relative;
     .carousel-inner {
       height: 100%;
       width: 100%;
@@ -56,6 +61,40 @@
         }
       }
     }
+  }
+  .btn-link-carousel {
+    width: 95%;
+    height: 51px;
+    background-color: $primary;
+    position: absolute;
+    bottom: -145px;
+    left: 2.7%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    a {
+      line-height: 20px;
+      text-align: center;
+      text-decoration: none;
+      color: white;
+      &:hover {
+        color: white;
+      }
+    }
+  }
+}
+@media (max-width: 375px) {
+  .carousel {
+    height: 100%;
+  }
+  .btn-link-carousel {
+    bottom: -97px;
+  }
+}
+@media (max-width: 320px) {
+  .btn-link-carousel {
+    bottom: -45px;
   }
 }
 
@@ -78,7 +117,6 @@
         }
       }
     }
-    
   }
   .carousel-container-mobile {
     display: none;

@@ -5,7 +5,7 @@ import BannerCarousel from './Carousel/BannerCarousell'
 
 function Main() {7
     // Mensaje de bienvenida
-    const msgWelcome = 'Bienvenida a tu tienda favorita de productos para el cuidado de tus uñas'
+    const msgWelcome = 'Bienvenida a tu tienda favorita de productos para el cuidado corporal'
     return (
         <div className="container-content">
             <BannerIcons />
