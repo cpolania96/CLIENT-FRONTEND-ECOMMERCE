@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
-import { HandleAssets } from '../../../assets/HandleAssets';
 import { AppContext } from '../../../Context/appContext';
 import CarouselComponent from './Carousel/Carousel'
 
@@ -9,9 +8,7 @@ function BannerCarousel() {
   const { carouselData } = useContext(AppContext)
 
   // Sources
-  const assets = {
-    IconHand: HandleAssets.src.icons.HandClick
-  }
+  
 
   // Mensaje botón 
   const btnMsgBanner = 'Encuentra el mejor duo para el cuidado de tus uñas'
@@ -68,7 +65,7 @@ function BannerCarousel() {
           <div className='btn-link-carousel'>
             <Link to=''>
               <h2>{btnMsgBanner}</h2>
-              {assets.IconHand}
+              {/* {assets.IconHand} */}
             </Link>
           </div>
         </>

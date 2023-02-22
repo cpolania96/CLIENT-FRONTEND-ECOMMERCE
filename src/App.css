@@ -32,7 +32,7 @@
       top: -14px;
       width: 127px; } }
 
-@media (max-width: 425px) {
+@media (max-width: 426px) {
   .container-logo {
     width: 31%;
     position: absolute;
@@ -92,7 +92,7 @@
         .container-search .search-desktop button svg .st0 {
           fill: #9E1460; } }
 
-@media (max-width: 425px) {
+@media (max-width: 426px) {
   .container-search {
     width: 32px;
     height: 32px;
@@ -131,48 +131,7 @@
     height: 100%;
     width: 80%; }
 
-@media (min-width: 426px) {
-  .container-menu {
-    height: 40px;
-    width: 100%;
-    background-color: #9E1460;
-    display: flex;
-    justify-content: center; }
-    .container-menu .menu-desktop {
-      width: 54rem;
-      height: 100%;
-      display: flex;
-      justify-content: space-between; }
-      .container-menu .menu-desktop a {
-        width: 10rem;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-decoration: none; }
-        .container-menu .menu-desktop a h2 {
-          color: white;
-          margin: 0 !important; }
-    .container-menu .btn-menu-mobile {
-      display: none; } }
-
-@media (max-width: 768px) {
-  .container-menu .menu-desktop {
-    width: 84%; }
-    .container-menu .menu-desktop a h2 {
-      font-size: 0.9rem !important; }
-    .container-menu .menu-desktop a:active {
-      background-color: #ffffff21; } }
-
-@media (min-width: 1024px) {
-  .container-menu .menu-desktop a:hover {
-    background-color: #ffffff21; } }
-
-@media (min-width: 426px) {
-  .container-menu .PrivateSwipeArea-root {
-    display: none; } }
-
-@media (max-width: 425px) {
+@media (max-width: 426px) {
   .menu-container {
     width: 18rem;
     height: 100%;
@@ -281,6 +240,47 @@
   .container-menu {
     left: 19px; } }
 
+@media (min-width: 426px) {
+  .container-menu {
+    height: 40px;
+    width: 100%;
+    background-color: #9E1460;
+    display: flex;
+    justify-content: center; }
+    .container-menu .menu-desktop {
+      width: 54rem;
+      height: 100%;
+      display: flex;
+      justify-content: space-between; }
+      .container-menu .menu-desktop a {
+        width: 10rem;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none; }
+        .container-menu .menu-desktop a h2 {
+          color: white;
+          margin: 0 !important; }
+    .container-menu .btn-menu-mobile {
+      display: none; } }
+
+@media (max-width: 768px) {
+  .container-menu .menu-desktop {
+    width: 84%; }
+    .container-menu .menu-desktop a h2 {
+      font-size: 0.9rem !important; }
+    .container-menu .menu-desktop a:active {
+      background-color: #ffffff21; } }
+
+@media (min-width: 1024px) {
+  .container-menu .menu-desktop a:hover {
+    background-color: #ffffff21; } }
+
+@media (min-width: 426px) {
+  .container-menu .PrivateSwipeArea-root {
+    display: none; } }
+
 .container-social {
   height: 1.6rem;
   width: 100%;
@@ -347,7 +347,7 @@
     .social .icon {
       width: 16px; } }
 
-@media (max-width: 425px) {
+@media (max-width: 426px) {
   .container-social .social {
     width: 38%;
     margin-right: 12px; }
@@ -407,7 +407,7 @@
     position: relative;
     width: 26px; } }
 
-@media (max-width: 425px) {
+@media (max-width: 426px) {
   .container-tools {
     width: 20%; }
     .container-tools .track {
@@ -657,7 +657,7 @@
     .container-cart .cart-mobile {
       display: none; } }
 
-@media (max-width: 425px) {
+@media (max-width: 426px) {
   .container-cart {
     width: 44%;
     position: absolute;
@@ -720,7 +720,7 @@ header {
       justify-content: space-between;
       align-items: center; }
 
-@media (max-width: 425px) {
+@media (max-width: 426px) {
   header .container-header .container-social,
   header .container-header .container-principal {
     width: 100%; }
@@ -798,7 +798,7 @@ h2 {
     .banner-icons ul li {
       width: 34%; } }
 
-@media (max-width: 425px) {
+@media (max-width: 426px) {
   .banner-icons {
     height: 64px;
     margin-top: 10px; }
@@ -865,7 +865,7 @@ h2 {
 .btn-link-carousel a .st0 {
   fill: white; }
 
-@media (max-width: 425px) {
+@media (max-width: 426px) {
   .carousel-container-desktop {
     display: none; }
   .carousel-container-mobile {
@@ -883,7 +883,6 @@ h2 {
           width: 100%; }
   .btn-link-carousel {
     width: 95%;
-    height: 51px;
     background-color: #9E1460;
     position: absolute;
     bottom: -145px;
@@ -891,12 +890,15 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 4px; }
+    border-radius: 4px;
+    padding: 5px; }
     .btn-link-carousel a {
       line-height: 20px;
       text-align: center;
       text-decoration: none;
       color: white; }
+      .btn-link-carousel a h2 {
+        margin: 0 !important; }
       .btn-link-carousel a:hover {
         color: white; } }
 
@@ -908,7 +910,7 @@ h2 {
 
 @media (max-width: 320px) {
   .btn-link-carousel {
-    bottom: -45px; } }
+    bottom: 38px; } }
 
 @media (min-width: 426px) {
   .carousel-container-desktop .carousel {

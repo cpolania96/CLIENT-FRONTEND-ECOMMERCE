@@ -41,7 +41,7 @@
 
 // Mobile
 
-@media (max-width: 425px) {
+@media (max-width: 426px) {
   .carousel-container-desktop {
     display: none;
   }
@@ -64,7 +64,6 @@
   }
   .btn-link-carousel {
     width: 95%;
-    height: 51px;
     background-color: $primary;
     position: absolute;
     bottom: -145px;
@@ -73,11 +72,15 @@
     justify-content: center;
     align-items: center;
     border-radius: 4px;
+    padding: 5px;
     a {
       line-height: 20px;
       text-align: center;
       text-decoration: none;
       color: white;
+      h2 {
+        margin: 0 !important;
+      }
       &:hover {
         color: white;
       }
@@ -94,7 +97,7 @@
 }
 @media (max-width: 320px) {
   .btn-link-carousel {
-    bottom: -45px;
+    bottom: 38px;
   }
 }
 
