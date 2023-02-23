@@ -24,11 +24,19 @@
 // MEDIAQUERIA
 
 //Mobile
+@media(max-width: 320px) {
+    .title {
+        span {
+            right: 27px;
+        }
+    }
+}
 @media(max-width: 426px) {
     .title {
         padding: 0 23px;
         span {
-            right: 16px;
+            right: 10px;
+            top: -13px;
         }
     }
 }

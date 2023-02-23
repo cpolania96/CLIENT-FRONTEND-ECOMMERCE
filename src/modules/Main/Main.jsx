@@ -6,7 +6,7 @@ import Title from '../../layout/Title'
 
 function Main() {7
     // Mensaje de bienvenida
-    const msgWelcome = 'BIENVENIDA A TU TIENDA FAVORITA DE PRODUCTOS PARA EL CUIDADO CORPORAL'
+    const msgWelcome = 'ENCUENTRA TODO LO QUE NECESITAS EN UN SOLO LUGAR'
     
     return (
         <div className="container-content">
