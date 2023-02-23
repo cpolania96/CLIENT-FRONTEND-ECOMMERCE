@@ -1,0 +1,64 @@
+// Estilos para elementos concurrentes en layout
+
+// Titulos
+.title {
+    width: 100%;
+    color: $titles;
+    padding: 0 10px;
+    font-size: 1.1rem !important;
+    text-align: center;
+    margin: 20px 0;
+    position: relative;
+    span {
+        position: absolute;
+        top: -11px;
+        right: 4px;
+        width: 19px;
+        height: auto;
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+// MEDIAQUERIA
+
+//Mobile
+@media(max-width: 426px) {
+    .title {
+        padding: 0 23px;
+        span {
+            right: 16px;
+        }
+    }
+}
+@media(max-width: 376px) {
+    .title {
+        padding: 0 30px;
+    }
+}
+// Desktop
+@media(min-width: 768px) {
+    .title {
+        padding: 0;
+        width: 54%;
+        margin: 20px auto;
+        font-size: 1.3rem !important;
+        span {
+            right: -8px;
+        }
+    }
+}
+@media(min-width: 1024px) {
+    .title {
+        margin: 30px auto;
+        span {
+            right: -5px;
+        }
+    }
+}
+@media(min-width: 1440px) {
+    .title {
+        width: 50%;
+    }
+}

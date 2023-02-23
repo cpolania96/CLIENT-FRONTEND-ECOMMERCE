@@ -31,9 +31,37 @@
 }
 
 .btn-link-carousel {
+  width: 95%;
+  background-color: $primary;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  padding: 5px;
   a {
-    .st0 {
-      fill: white;
+    line-height: 20px;
+    margin: 5px 0;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    h2 {
+      margin: 0 !important;
+      display: flex;
+      align-items: center;
+    }
+    svg {
+      height: auto;
+      width: 9%;
+      .st0 {
+        fill: white;
+      }
+    }
+    &:hover {
+      color: white;
     }
   }
 }
@@ -47,7 +75,7 @@
   }
   .carousel-container-mobile {
     width: 100%;
-    margin: 18px auto;
+    margin: 11px auto 3px auto;
     border-radius: 0px;
     overflow: hidden;
     position: relative;
@@ -63,41 +91,20 @@
     }
   }
   .btn-link-carousel {
-    width: 95%;
-    background-color: $primary;
-    position: absolute;
-    bottom: -145px;
-    left: 2.7%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 4px;
-    padding: 5px;
-    a {
-      line-height: 20px;
-      text-align: center;
-      text-decoration: none;
-      color: white;
-      h2 {
-        margin: 0 !important;
-      }
-      &:hover {
-        color: white;
-      }
-    }
+    bottom: -56px;
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 376px) {
   .carousel {
     height: 100%;
   }
   .btn-link-carousel {
-    bottom: -97px;
+    bottom: -8px;
   }
 }
 @media (max-width: 320px) {
   .btn-link-carousel {
-    bottom: 38px;
+    bottom: 43px;
   }
 }
 
@@ -123,6 +130,12 @@
   }
   .carousel-container-mobile {
     display: none;
+  }
+  .btn-link-carousel {
+    width: 55%;
+    left: 24%;
+    a {
+    }
   }
 }
 @media (min-width: 769px) {

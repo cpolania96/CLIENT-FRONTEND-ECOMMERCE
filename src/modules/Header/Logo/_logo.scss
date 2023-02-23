@@ -16,12 +16,8 @@
 // MEDIAQUERIES
 
 // Desktop
-@media (max-width: 1440px) {
-    .container-logo {
-        width: 162px;
-    }
-}
-@media (max-width: 1366px) {
+
+@media (min-width: 1366px) {
     .container-logo {
         width: 162px;
     }

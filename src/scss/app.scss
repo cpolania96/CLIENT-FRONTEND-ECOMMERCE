@@ -3,14 +3,15 @@
 
 // *************************
 // Imports
-@import "src/modules/Header/header";
-@import "src/scss/layout/reset";
-@import "src/scss/mixins/mixins";
-@import "src/scss/variables/variables";
-@import "src/modules/Main/main";
-@import "src/modules/ItemDetailContainer/detail";
-@import "src/modules/Footer/footer";
-@import "src/modules/CartWidget/cart";
+@import "../modules/Header/header";
+@import "../scss/layout/reset";
+@import "../scss/mixins/mixins";
+@import "../scss/variables/variables";
+@import "../modules/Main/main";
+@import "../modules/ItemDetailContainer/detail";
+@import "../modules/Footer/footer";
+@import "../modules/CartWidget/cart";
+@import "../layout/layout";
 
     // Theme colors
 @import "./theme/colors";
