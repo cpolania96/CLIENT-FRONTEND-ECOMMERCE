@@ -24,13 +24,6 @@
 // MEDIAQUERIA
 
 //Mobile
-@media(max-width: 320px) {
-    .title {
-        span {
-            right: 27px;
-        }
-    }
-}
 @media(max-width: 426px) {
     .title {
         padding: 0 23px;
@@ -43,6 +36,13 @@
 @media(max-width: 376px) {
     .title {
         padding: 0 30px;
+    }
+}
+@media(max-width: 320px) {
+    .title {
+        span {
+            right: 27px;
+        }
     }
 }
 // Desktop

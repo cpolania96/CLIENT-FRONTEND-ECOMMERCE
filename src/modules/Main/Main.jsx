@@ -3,6 +3,7 @@ import ContainerBanner from './ContainerBanner'
 import BannerIcons from './BannerIcons/BannerIcons'
 import BannerCarousel from './Carousel/BannerCarousell'
 import Title from '../../layout/Title'
+import BannerLinks from './BannerLinks/BannerLinks'
 
 function Main() {7
     // Mensaje de bienvenida
@@ -13,7 +14,7 @@ function Main() {7
             <BannerIcons />
             <BannerCarousel />
             <Title msg={msgWelcome}/>
-            {/* <ContainerBanner TITLE={TITLE2} /> */}
+            <BannerLinks />
         </div>
     )
 }
